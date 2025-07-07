@@ -1,0 +1,10 @@
+Metric,Original Model,Revised Model
+Month 1 Profit,"EUR -3,700 (LOSS)",EUR 750 (PROFIT)
+Month 3 Profit,EUR -900 (LOSS),"EUR 2,700 (PROFIT)"
+Month 6 Profit,"EUR 1,300","EUR 5,425 (PROFIT)"
+EUR 5K Target Month,Month 11,Month 6
+Year 1 Revenue,"EUR 111,200","EUR 126,700"
+Year 1 Profit,"EUR 9,880","EUR 69,825"
+Fixed Costs/Month,"EUR 5,200",EUR 900
+Break-even Projects,8-10 projects,1-2 projects
+Avg Margin Year 1,35%,52%
