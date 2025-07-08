@@ -16,7 +16,7 @@ export default function PlayButton({ isHovered, className }: PlayButtonProps) {
       }
       initial={{ rotate: 0 }}
       animate={{ rotate: isHovered ? 360 : 0 }}
-      transition={{ duration: 2, loop: Infinity }}
+      transition={{ duration: 2, repeat: Infinity, repeatType: "loop" }}
     >
       <svg className="absolute" width="40" height="40" viewBox="0 0 40 40">
         <circle

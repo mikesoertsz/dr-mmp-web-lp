@@ -1,4 +1,6 @@
-import { Geist, Geist_Mono, Inter, Poppins } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import localFont from "next/font/local";
 
 export const poppins = Poppins({
@@ -20,12 +22,5 @@ export const recoleta = localFont({
   display: "swap",
 });
 
-export const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-export const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export const geistSans = GeistSans;
+export const geistMono = GeistMono;
