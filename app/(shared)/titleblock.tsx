@@ -16,15 +16,12 @@ interface TitleBlockProps {
 }
 
 export function TitleBlock({
-  icon,
-  image,
   preheading,
   heading,
   subheading,
   body,
   theme = "light",
   orientation = "center",
-  terminalTextClassName,
 }: TitleBlockProps) {
   return (
     <div
@@ -48,7 +45,7 @@ export function TitleBlock({
         </Preheading>
       )}
       {heading && (
-        <Heading className="font-heading font-light tracking-tight text-3xl md:text-4xl subpixel-antialiased">
+        <Heading className="font-recoleta font-light tracking-tight text-3xl md:text-4xl subpixel-antialiased">
           {heading}
         </Heading>
       )}

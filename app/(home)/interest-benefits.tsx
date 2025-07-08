@@ -3,7 +3,6 @@
 import { InnerWrap, Wrapper } from "@/app/(shared)/atoms";
 import { TitleBlock } from "@/app/(shared)/titleblock";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const BENEFITS_CONTENT = {
@@ -18,7 +17,7 @@ const BENEFITS_CONTENT = {
       title: "All-In-One Package",
       description:
         "One provider for all your needs. Photography, design, videography, AI enhancement & more.",
-      image: "/img/hero/all-in-one.png",
+      image: "/img/hero/agent_update.png",
       colspan: 2,
     },
     {
@@ -34,13 +33,13 @@ const BENEFITS_CONTENT = {
       title: "All Formats Provided",
       description:
         "Receive your files in every format you need for web, print, and more, ensuring compatibility.",
-      image: "/img/hero/shift.png",
+      image: "/img/hero/agent_update.png",
       colspan: 1,
     },
   ],
 };
 
-export default function BenefitsSection() {
+export default function InterestBenefits() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

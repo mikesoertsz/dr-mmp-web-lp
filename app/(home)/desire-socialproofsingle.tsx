@@ -20,7 +20,7 @@ const content = {
   },
 };
 
-export default function SocialProofSimple() {
+export default function DesireSocialProofSingle() {
   return (
     <Wrapper id="social-proof" className="bg-[#FDF6EE]">
       <InnerWrap className="flex flex-col items-center justify-center text-center">

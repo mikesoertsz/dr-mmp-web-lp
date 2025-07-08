@@ -1,11 +1,12 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { zodResolver } from "@hookform/resolvers/zod";
 import clsx from "clsx";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-export const promoSchema = z.object({
+const promoSchema = z.object({
   promoCode: z.string().min(1, "Promo code is required"),
 });
 
@@ -35,6 +36,7 @@ export default function PromoCodeForm({
     clearErrors,
     formState: { errors },
   } = useForm<z.infer<typeof promoSchema>>({
+    resolver: zodResolver(promoSchema),
     defaultValues: { promoCode: "" },
     mode: "onChange",
   });

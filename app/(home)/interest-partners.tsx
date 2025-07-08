@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Wrapper, InnerWrap } from "@/app/(shared)/atoms";
 import { TitleBlock } from "@/app/(shared)/titleblock";
 
-export default function PartnersSection() {
+export default function InterestPartners() {
   const partners = [
     {
       icon: "/logos/realestate/wide/century21_wide.svg",

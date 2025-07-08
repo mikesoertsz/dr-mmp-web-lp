@@ -1,12 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { InnerWrap, Wrapper } from "../(shared)/atoms";
-import { TitleBlock } from "../(shared)/titleblock";
-import { Check, Play } from "lucide-react";
+import { Check } from "lucide-react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import PlayButton from "@/components/ui/play-button";
+import { InnerWrap, Wrapper } from "@/app/(shared)/atoms";
+import { TitleBlock } from "@/app/(shared)/titleblock";
 
 type HeroSectionContentType = {
   headings: {
@@ -32,14 +29,6 @@ type HeroSectionContentType = {
     list: string[];
     colSpan: number;
   }[];
-};
-
-type CartItem = {
-  id: string;
-  name: string;
-  price: number;
-  description: string;
-  quantity: number;
 };
 
 const content: HeroSectionContentType = {
@@ -119,29 +108,10 @@ const content: HeroSectionContentType = {
 };
 
 export default function HeroSection() {
-  const [isHovered, setIsHovered] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const handleMouseEnter = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
-    }
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    if (videoRef.current) {
-      videoRef.current.pause();
-    }
-    setIsHovered(false);
-  };
-
   return (
     <Wrapper
       id="hero"
       className="py-12 bg-[#FDF6EE] w-full min-h-[40dvh] flex items-center justify-center"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
     >
       <InnerWrap className="flex flex-col w-full items-center justify-center max-w-7xl">
         <TitleBlock

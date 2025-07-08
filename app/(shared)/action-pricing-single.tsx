@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Check, Plus, Tag } from "lucide-react";
+import { Check, Plus } from "lucide-react";
 import Image from "next/image";
-import PromoCodeForm from "@/components/PromoCodeForm";
 import {
   Select,
   SelectTrigger,
@@ -9,7 +8,6 @@ import {
   SelectContent,
   SelectItem,
 } from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
 import { InnerWrap, Wrapper } from "./atoms";
 
 export type PricingData = {
@@ -78,16 +76,9 @@ function calculatePrice(tier: string): number {
 
 export default function PricingSingle({ pricing }: { pricing?: PricingData }) {
   const pricingsingle = pricing || defaultPricing;
-  const [isPromoValid, setIsPromoValid] = useState(false);
-  const [showPromoError, setShowPromoError] = useState(false);
   const [selectedTier, setSelectedTier] = useState<string>("T3");
-  const [promoDiscount, setPromoDiscount] = useState<number>(0);
 
-  const currentPrice = isPromoValid
-    ? calculatePrice(selectedTier) -
-      Math.round((calculatePrice(selectedTier) * promoDiscount) / 100)
-    : calculatePrice(selectedTier);
-  const savings = calculatePrice(selectedTier) - currentPrice;
+  const currentPrice = calculatePrice(selectedTier);
 
   return (
     <Wrapper className="min-h-[60dvh] py-24">
@@ -157,48 +148,13 @@ export default function PricingSingle({ pricing }: { pricing?: PricingData }) {
                   <div className="text-4xl font-bold text-slate-900">
                     €{currentPrice.toLocaleString()}
                   </div>
-                  {!isPromoValid && (
-                    <div className="text-lg text-slate-500 line-through">
-                      €{calculatePrice(selectedTier).toLocaleString()}
-                    </div>
-                  )}
                 </div>
-                {isPromoValid && (
-                  <div className="flex items-center space-x-2 mb-2">
-                    <Badge
-                      variant="secondary"
-                      className="bg-green-100 text-green-800"
-                    >
-                      <Tag className="h-3 w-3 mr-1" />
-                      Promo Applied: Save €{savings}
-                    </Badge>
-                  </div>
-                )}
                 <p className="text-xl">{pricingsingle.price_description}</p>
                 {pricingsingle.afterprice && (
                   <p className="text-sm font-medium mt-2">
                     {pricingsingle.afterprice}
                   </p>
                 )}
-              </div>
-              {/* Promo Code Input */}
-              <div className="w-full flex items-center justify-end mt-2 mb-2">
-                <div className="w-full text-xs">
-                  <PromoCodeForm
-                    onValid={(discount) => {
-                      setIsPromoValid(true);
-                      setShowPromoError(false);
-                      setPromoDiscount(discount);
-                    }}
-                    onInvalid={() => {
-                      setIsPromoValid(false);
-                      setShowPromoError(true);
-                      setPromoDiscount(0);
-                    }}
-                    isPromoValid={isPromoValid}
-                    showPromoError={showPromoError}
-                  />
-                </div>
               </div>
             </div>
             <div className="flex flex-col w-full items-center justify-start gap-2">
@@ -214,7 +170,7 @@ export default function PricingSingle({ pricing }: { pricing?: PricingData }) {
                   €{currentPrice.toLocaleString()}
                 </span>
               </a>
-              <p className="text-xs text-gray-800 mt-0 flex items-center justify-center gap-1 mt-3">
+              <p className="text-xs text-gray-800 flex items-center justify-center gap-1 mt-3">
                 Secure payments with{" "}
                 <Image
                   src="/img/stripe.svg"

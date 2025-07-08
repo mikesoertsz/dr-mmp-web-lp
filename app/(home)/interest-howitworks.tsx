@@ -4,7 +4,7 @@ import { CheckCircle, Calendar, Truck } from "lucide-react";
 import { InnerWrap, Wrapper } from "@/app/(shared)/atoms";
 import { TitleBlock } from "@/app/(shared)/titleblock";
 
-export default function HowItWorksSection() {
+export default function InterestHowItWorks() {
   const steps = [
     {
       icon: CheckCircle,
