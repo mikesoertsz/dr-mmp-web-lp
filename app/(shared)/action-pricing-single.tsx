@@ -1,13 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Check, Plus } from "lucide-react";
 import Image from "next/image";
-import {
-  Select,
-  SelectTrigger,
-  SelectValue,
-  SelectContent,
-  SelectItem,
-} from "@/components/ui/select";
 import { InnerWrap, Wrapper } from "./atoms";
 
 export type PricingData = {
@@ -33,7 +26,7 @@ const defaultPricing: PricingData = {
   level: "Complete Package",
   title: "All-in-One",
   fullPrice: 3899,
-  currentOfferPrice: 2499,
+  currentOfferPrice: 3499,
   offersLeft: 4,
   price_description: "One-time payment",
   afterprice: "",
@@ -48,10 +41,6 @@ const defaultPricing: PricingData = {
   description: "Everything you need to market your property.",
   buttonText: "Buy Package",
   links: [
-    // {
-    //   href: "#",
-    //   text: "View all services & add-ons",
-    // },
     {
       href: "#",
       text: "Calculate your costs",
@@ -64,21 +53,10 @@ const defaultPricing: PricingData = {
   offerActive: true,
 };
 
-const TIERS = ["T3", "T4", "T5", "T6", "T7", "T8", "T9", "T10+"];
-const BASE_PRICE = 3899;
-const MAX_PRICE = 15000;
-
-function calculatePrice(tier: string): number {
-  const tierNumber = parseInt(tier.replace("T", ""));
-  const price = BASE_PRICE + (tierNumber - 3) * 1000;
-  return Math.min(price, MAX_PRICE);
-}
-
 export default function PricingSingle({ pricing }: { pricing?: PricingData }) {
   const pricingsingle = pricing || defaultPricing;
-  const [selectedTier, setSelectedTier] = useState<string>("T3");
-
-  const currentPrice = calculatePrice(selectedTier);
+  const currentPrice = pricingsingle.currentOfferPrice;
+  const fullPrice = pricingsingle.fullPrice;
 
   return (
     <Wrapper className="min-h-[60dvh] py-24">
@@ -127,29 +105,19 @@ export default function PricingSingle({ pricing }: { pricing?: PricingData }) {
           </div>
           <div className="flex flex-col items-start justify-between p-12 bg-white w-full">
             <div className="w-full">
-              {/* Select Tier */}
-              <div className="mb-4">
-                <Select value={selectedTier} onValueChange={setSelectedTier}>
-                  <SelectTrigger className="w-full max-w-xs">
-                    <SelectValue placeholder="Select Tier" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {TIERS.map((tier) => (
-                      <SelectItem key={tier} value={tier}>
-                        {tier}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
               {/* Price Display */}
               <div className="text-left">
                 <div className="flex items-center space-x-4 mb-2">
-                  <div className="text-4xl font-bold text-slate-900">
+                  <div className="text-4xl font-light tracking-tight text-slate-900">
                     €{currentPrice.toLocaleString()}
                   </div>
+                  <div className="text-lg text-gray-400 line-through">
+                    €{fullPrice.toLocaleString()}
+                  </div>
                 </div>
-                <p className="text-xl">{pricingsingle.price_description}</p>
+                <p className="text-md text-stone-600">
+                  {pricingsingle.price_description}
+                </p>
                 {pricingsingle.afterprice && (
                   <p className="text-sm font-medium mt-2">
                     {pricingsingle.afterprice}

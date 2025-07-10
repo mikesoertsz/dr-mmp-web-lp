@@ -4,12 +4,15 @@ import { Check } from "lucide-react";
 import Image from "next/image";
 import { InnerWrap, Wrapper } from "@/app/(shared)/atoms";
 import { TitleBlock } from "@/app/(shared)/titleblock";
+import { Button } from "@/components/ui/button";
+// @ts-expect-error: No types for react-rotating-text
+import ReactRotatingText from "react-rotating-text";
 
 type HeroSectionContentType = {
   headings: {
     preheading: string;
     heading: string;
-    body: string;
+    subheading: string;
   };
   badgeText: string;
   title: {
@@ -33,9 +36,9 @@ type HeroSectionContentType = {
 
 const content: HeroSectionContentType = {
   headings: {
-    preheading: "Complete Solution",
-    heading: "All-in-One Real Estate Marketing",
-    body: "Professional photography, 3D renders, interior staging, and AI animations - everything you need to showcase your property perfectly in one comprehensive package.",
+    preheading: "Complete Real Estate Marketing",
+    heading: "Sell your property 3X faster.",
+    subheading: "Real estate marketing that emotionally hooks buyers.",
   },
   badgeText: "Complete Solution",
   title: {
@@ -111,16 +114,34 @@ export default function HeroSection() {
   return (
     <Wrapper
       id="hero"
-      className="py-12 bg-[#FDF6EE] w-full min-h-[40dvh] flex items-center justify-center"
+      className="py-24 bg-[#FDF6EE] w-full min-h-[50dvh] flex items-center justify-center"
     >
       <InnerWrap className="flex flex-col w-full items-center justify-center max-w-7xl">
-        <TitleBlock
-          preheading={content.headings.preheading}
-          heading={content.headings.heading}
-          body={content.headings.body}
-          theme="light"
-          orientation="center"
-        />
+        <div className="w-full flex flex-col items-center justify-center my-32">
+          <TitleBlock
+            heading={content.headings.heading}
+            theme="light"
+            orientation="center"
+          />
+          <div className="text-2xl subpixel-antialiased font-light font-poppins text-stone-500 mt-2 text-center">
+            Real estate marketing that emotionally hooks{" "}
+            <span className="inline-block align-baseline font-medium tracking-tight text-indigo-500">
+              <ReactRotatingText items={["buyers", "sellers", "tenants"]} />
+            </span>
+            .
+          </div>
+          <div className="flex gap-4 mt-8">
+            <Button className="bg-stone-800 hover:bg-stone-700 cursor-pointer transition duration-300 ease-in-out rounded-xl h-12 px-6">
+              Explore Services
+            </Button>
+            <Button
+              variant="secondary"
+              className="bg-[#F0E6DC] hover:bg-[#E8DED3] cursor-pointer  transition duration-300 ease-in-out rounded-xl h-12 px-6"
+            >
+              Get Started
+            </Button>
+          </div>
+        </div>
         <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full mt-12">
           {content.serviceslist
             .filter((service) => service.preheading !== "4D")

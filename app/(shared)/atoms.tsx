@@ -5,9 +5,9 @@ export const InnerWrap = tw.div`container mx-auto max-w-6xl px-5 xl:px-0`;
 
 export const Icon = tw.div`flex items-start justify-start mb-3`;
 export const ImageWrap = tw.div`relative w-10 h-10 py-4`;
-export const Preheading = tw.h4`text-xs bg-brand-b2 rounded-full px-4 py-1 text-brand-secondary font-inter`;
-export const Heading = tw.h1`text-xl font-light font-inter font-heading md:text-4xl`;
-export const SubHeading = tw.h2`text-3xl font-semibold tracking-tight font-body`;
+export const Preheading = tw.h4`text-xs uppercase tracking-widest py-1 text-stone-400 font-poppins font-medium`;
+export const Heading = tw.h1`text-xl font-medium tracking-tight font-recoleta md:text-5xl my-1`;
+export const SubHeading = tw.h2`text-xl font-light font-poppins tracking-tight subpixel-antialiased text-stone-600`;
 export const Body = tw.p`text-gray-400 max-w-xl text-sm font-body leading-relaxed font-body`;
 
 export const PreTitle = tw.h4`text-xs mb-2 uppercase tracking-widest font-body`;

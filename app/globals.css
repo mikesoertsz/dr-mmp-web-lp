@@ -10,6 +10,7 @@
   --font-mono: var(--font-geist-mono);
   --font-title: var(--font-title);
   --font-body: var(--font-body);
+  --font-poppins: var(--font-body);
   --font-inter: var(--font-inter);
   --font-recoleta: var(--font-recoleta);
   --color-sidebar-ring: var(--sidebar-ring);

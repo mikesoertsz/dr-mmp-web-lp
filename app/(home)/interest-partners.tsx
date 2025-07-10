@@ -8,15 +8,17 @@ export default function InterestPartners() {
   const partners = [
     {
       icon: "/logos/realestate/wide/century21_wide.svg",
+      width: 400,
+      height: 200,
       link: "https://www.century21.com",
+      alt: "Century 21",
     },
     {
-      icon: "/logos/realestate/wide/remax_wide.png",
-      link: "https://www.remax.com",
-    },
-    {
-      icon: "/logos/realestate/wide/idealista_wide.png",
+      icon: "/logos/realestate/wide/idealista.svg",
+      width: 150,
+      height: 100,
       link: "https://www.idealista.com",
+      alt: "Idealista",
     },
   ];
 
@@ -42,10 +44,9 @@ export default function InterestPartners() {
                 <a href={partner.link} target="_blank" rel="noopener noreferre">
                   <Image
                     src={partner.icon}
-                    alt={`Partner ${index + 1} Logo`}
-                    fill
-                    className="absolute inset-0"
-                    style={{ objectFit: "contain" }}
+                    alt={partner.alt}
+                    width={partner.width}
+                    height={partner.height}
                   />
                 </a>
               </div>

@@ -8,7 +8,7 @@ interface TitleBlockProps {
   image?: string;
   preheading?: string;
   heading?: string;
-  subheading?: string;
+  subheading?: string | React.ReactNode;
   body?: string | React.ReactNode;
   theme: "light" | "dark";
   orientation: "center" | "left";
@@ -45,11 +45,15 @@ export function TitleBlock({
         </Preheading>
       )}
       {heading && (
-        <Heading className="font-recoleta font-light tracking-tight text-3xl md:text-4xl subpixel-antialiased">
+        <Heading className="font-recoleta font-light tracking-tight text-3xl md:text-5xl subpixel-antialiased">
           {heading}
         </Heading>
       )}
-      {subheading && <SubHeading>{subheading}</SubHeading>}
+      {subheading && (
+        <SubHeading className="text-2xl subpixel-antialiased font-light font-poppins text-stone-500">
+          {subheading}
+        </SubHeading>
+      )}
       {body && (
         <Body
           className={clsx(
