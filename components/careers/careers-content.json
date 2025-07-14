@@ -1,0 +1,188 @@
+{
+  "hero": {
+    "backgroundImage": "/public/img/hero/agent_update.png",
+    "title": "Join Our Creative Team",
+    "description": "Work remotely, earn above-market rates, and grow your career with Portugal's leading property marketing company.",
+    "tagline": "Flexible, remote, and rewarding opportunities for creative professionals."
+  },
+  "benefits": [
+    {
+      "icon": "Briefcase",
+      "category": "Professional Growth",
+      "benefits": [
+        "Access to exclusive projects",
+        "Skill development opportunities",
+        "Mentorship from industry leaders"
+      ]
+    },
+    {
+      "icon": "GraduationCap",
+      "category": "Learning",
+      "benefits": [
+        "Workshops and training",
+        "Certification support",
+        "Knowledge sharing sessions"
+      ]
+    },
+    {
+      "icon": "Users",
+      "category": "Community",
+      "benefits": [
+        "Collaborative team culture",
+        "Networking events",
+        "Annual retreats"
+      ]
+    },
+    {
+      "icon": "Award",
+      "category": "Recognition",
+      "benefits": [
+        "Performance bonuses",
+        "Monthly awards",
+        "Public testimonials"
+      ]
+    }
+  ],
+  "workingWithUs": {
+    "projectFlow": [
+      "Submit your application and portfolio",
+      "Initial screening and skills assessment",
+      "Interview with the team",
+      "Project assignment and onboarding"
+    ],
+    "paymentTerms": [
+      "Transparent payment schedule",
+      "Competitive rates",
+      "Monthly payouts via bank transfer"
+    ],
+    "communication": [
+      "Slack for daily updates",
+      "Monthly team meetings",
+      "Direct access to project managers"
+    ]
+  },
+  "whyWorkWithUs": [
+    {
+      "icon": "Rocket",
+      "title": "Fast Growth",
+      "benefits": [
+        "Be part of a rapidly expanding company",
+        "Opportunities for advancement"
+      ]
+    },
+    {
+      "icon": "DollarSign",
+      "title": "Great Pay",
+      "benefits": ["Above-market compensation", "Performance bonuses"]
+    },
+    {
+      "icon": "Home",
+      "title": "Remote Work",
+      "benefits": ["100% remote opportunities", "Flexible hours"]
+    },
+    {
+      "icon": "TrendingUp",
+      "title": "Career Growth",
+      "benefits": ["Skill development", "Mentorship"]
+    }
+  ],
+  "openings": [
+    {
+      "id": "photographer",
+      "icon": "Camera",
+      "title": "Real Estate Photographer",
+      "compensation": {
+        "range": "€1000-€2000/mo",
+        "extras": ["Travel allowance", "Equipment provided"]
+      },
+      "responsibilities": [
+        "Photograph properties on location",
+        "Edit and deliver high-quality images",
+        "Coordinate with agents"
+      ],
+      "requirements": [
+        "Experience in real estate photography",
+        "Portfolio of previous work"
+      ],
+      "portfolio": ["10+ property shoots", "Before/after examples"]
+    },
+    {
+      "id": "videographer",
+      "icon": "Video",
+      "title": "Real Estate Videographer",
+      "compensation": {
+        "range": "€1200-€2200/mo",
+        "extras": ["Editing suite access", "Travel allowance"]
+      },
+      "responsibilities": [
+        "Film and edit property videos",
+        "Work with creative team",
+        "Deliver on tight deadlines"
+      ],
+      "requirements": ["Experience in videography", "Strong editing skills"],
+      "portfolio": ["5+ property videos", "Drone footage examples"]
+    }
+  ],
+  "companyCulture": {
+    "values": [
+      {
+        "name": "Collaboration",
+        "description": "We work together to achieve great results."
+      },
+      {
+        "name": "Innovation",
+        "description": "We embrace new ideas and technology."
+      },
+      {
+        "name": "Quality",
+        "description": "We deliver the best for our clients."
+      }
+    ],
+    "mission": "To transform real estate marketing through creativity and technology."
+  },
+  "contact": {
+    "email": "careers@example.com",
+    "callScheduling": "Book a call with our team to discuss opportunities.",
+    "phone": "+351 123 456 789"
+  },
+  "footer": {
+    "tagline": "Join the team that's redefining property marketing in Portugal.",
+    "equalOpportunity": "We are an equal opportunity employer. All qualified applicants will receive consideration for employment."
+  },
+  "applicationProcess": {
+    "steps": [
+      {
+        "step": "1",
+        "title": "Submit Application",
+        "description": "Complete the online application form and upload your resume and portfolio."
+      },
+      {
+        "step": "2",
+        "title": "Initial Screening",
+        "description": "Our team will review your application and contact you for a brief screening call if you meet the requirements."
+      },
+      {
+        "step": "3",
+        "title": "Skills Assessment",
+        "description": "You may be asked to complete a short skills assessment relevant to the position."
+      },
+      {
+        "step": "4",
+        "title": "Interview",
+        "description": "Participate in a video interview with our hiring team to discuss your experience and fit."
+      },
+      {
+        "step": "5",
+        "title": "Offer & Onboarding",
+        "description": "If selected, you will receive an offer and begin the onboarding process."
+      }
+    ],
+    "requirements": [
+      "Updated resume or CV",
+      "Portfolio or work samples (if applicable)",
+      "Contact information (email and phone)",
+      "References (optional but recommended)",
+      "Cover letter (optional)"
+    ]
+  }
+}

@@ -4,13 +4,12 @@ import { CheckCircle, Calendar, Truck } from "lucide-react";
 import { InnerWrap, Wrapper } from "@/app/(shared)/atoms";
 import { TitleBlock } from "@/app/(shared)/titleblock";
 
-export default function InterestHowItWorks() {
+export default function HowItWorksSection() {
   const steps = [
     {
       icon: CheckCircle,
       title: "Pay & Book",
-      description:
-        "Complete your payment securely through our platform and schedule your date for photography and videography of the property.",
+      description: "Complete your payment securely through our platform.",
     },
     {
       icon: Calendar,
@@ -20,8 +19,7 @@ export default function InterestHowItWorks() {
     {
       icon: Truck,
       title: "Receive",
-      description:
-        "All files delivered in formats perfect for immediate upload to RE platforms.",
+      description: "Enjoy the service delivered to your doorstep.",
     },
   ];
 
