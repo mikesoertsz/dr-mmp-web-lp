@@ -1,0 +1,324 @@
+{
+  "jobs": [
+    {
+      "id": "photographer-remote",
+      "title": "Freelance Photographer",
+      "slug": "photographer",
+      "category": "Photography",
+      "type": "Freelance",
+      "location": "Remote",
+      "department": "Creative Services",
+      "overview": "Join our network of professional photographers specializing in real estate and property marketing. Work on exciting projects creating stunning visuals that help properties sell faster and for better prices.",
+      "responsibilities": [
+        "Capture high-quality interior and exterior property photographs",
+        "Ensure proper lighting, composition, and staging for each shot",
+        "Deliver professionally edited images within agreed timelines",
+        "Coordinate with property owners and real estate agents",
+        "Maintain consistent quality standards across all projects",
+        "Provide creative input on optimal shooting angles and techniques",
+        "Handle post-processing and color correction",
+        "Manage equipment and ensure backup systems are in place"
+      ],
+      "requirements": [
+        "Minimum 2 years experience in real estate or architectural photography",
+        "Professional camera equipment (DSLR/mirrorless with wide-angle lens)",
+        "Proficiency in photo editing software (Lightroom, Photoshop)",
+        "Strong portfolio demonstrating interior and exterior photography skills",
+        "Excellent communication and time management skills",
+        "Ability to work independently and meet deadlines",
+        "Reliable transportation to property locations",
+        "Professional liability insurance preferred"
+      ],
+      "skills": [
+        "Real estate photography",
+        "HDR photography techniques",
+        "Interior and exterior lighting",
+        "Adobe Lightroom",
+        "Adobe Photoshop",
+        "Wide-angle lens expertise",
+        "Composition and framing",
+        "Post-processing workflow",
+        "Client communication",
+        "Project management"
+      ],
+      "benefits": [
+        "Flexible schedule - work when it suits you",
+        "Competitive per-project compensation",
+        "Steady stream of projects",
+        "Professional development opportunities",
+        "Direct client relationships",
+        "Creative freedom in your approach",
+        "Growing portfolio of high-end properties",
+        "Collaborative team environment"
+      ],
+      "compensation": {
+        "type": "Per Project",
+        "range": "€200-800",
+        "details": "Based on property size, complexity, and additional services. Higher rates for premium properties and rush jobs."
+      },
+      "equipment": [
+        "Professional DSLR or mirrorless camera",
+        "Wide-angle lens (14-24mm equivalent)",
+        "Tripod with adjustable legs",
+        "External flash/lighting equipment",
+        "Backup camera body",
+        "Multiple memory cards",
+        "Editing software licenses",
+        "Reliable laptop/computer for processing"
+      ],
+      "availability": "Flexible schedule with weekend availability preferred",
+      "applicationProcess": [
+        "Submit application with portfolio",
+        "Initial portfolio review",
+        "Phone/video interview",
+        "Test shoot assignment",
+        "Background check and references",
+        "Onboarding and training session"
+      ],
+      "tags": ["Photography", "Real Estate", "Remote", "Freelance"],
+      "isActive": true,
+      "publishedDate": "2025-01-15",
+      "lastUpdated": "2025-01-15"
+    },
+    {
+      "id": "interior-designer-remote",
+      "title": "Freelance Interior Designer",
+      "slug": "interior-designer",
+      "category": "Design",
+      "type": "Freelance",
+      "location": "Remote",
+      "department": "Creative Services",
+      "overview": "Create stunning virtual staging and interior design solutions for real estate properties. Help potential buyers visualize the full potential of empty or outdated spaces through professional design expertise.",
+      "responsibilities": [
+        "Create virtual staging designs for empty properties",
+        "Develop furniture and decor layouts for various room types",
+        "Select appropriate color schemes and design styles",
+        "Produce photorealistic renderings and visualizations",
+        "Collaborate with photographers and 3D artists",
+        "Maintain current knowledge of interior design trends",
+        "Ensure designs align with target market demographics",
+        "Provide multiple design options per project"
+      ],
+      "requirements": [
+        "Bachelor's degree in Interior Design or related field",
+        "3+ years experience in interior design or virtual staging",
+        "Proficiency in design software (SketchUp, AutoCAD, or similar)",
+        "Strong understanding of color theory and space planning",
+        "Portfolio showcasing residential interior design work",
+        "Knowledge of furniture and decor sourcing",
+        "Excellent visual communication skills",
+        "Ability to work with tight deadlines"
+      ],
+      "skills": [
+        "Virtual staging",
+        "Space planning",
+        "Color theory",
+        "SketchUp",
+        "AutoCAD",
+        "3D modeling",
+        "Furniture selection",
+        "Design visualization",
+        "Client presentation",
+        "Market research"
+      ],
+      "benefits": [
+        "Work from anywhere with internet connection",
+        "Diverse range of property types and styles",
+        "Opportunity to influence property sales",
+        "Flexible project timelines",
+        "Professional portfolio development",
+        "Collaboration with industry professionals",
+        "Competitive project-based compensation",
+        "Creative freedom in design choices"
+      ],
+      "compensation": {
+        "type": "Per Project",
+        "range": "€300-1200",
+        "details": "Varies based on room count, design complexity, and revision requirements. Premium rates for luxury properties."
+      },
+      "equipment": [
+        "High-performance computer/laptop",
+        "Design software licenses",
+        "High-resolution monitor",
+        "Graphics tablet (optional)",
+        "Reliable internet connection",
+        "Professional presentation software",
+        "Cloud storage solution",
+        "Backup system for work files"
+      ],
+      "availability": "Flexible schedule with ability to meet project deadlines",
+      "applicationProcess": [
+        "Submit application with design portfolio",
+        "Portfolio review and assessment",
+        "Design skills interview",
+        "Sample virtual staging project",
+        "Reference check",
+        "Contract negotiation and onboarding"
+      ],
+      "tags": ["Interior Design", "Virtual Staging", "Remote", "Freelance"],
+      "isActive": true,
+      "publishedDate": "2025-01-15",
+      "lastUpdated": "2025-01-15"
+    },
+    {
+      "id": "3d-artist-remote",
+      "title": "Freelance 3D Artist",
+      "slug": "3d-artist",
+      "category": "3D Visualization",
+      "type": "Freelance",
+      "location": "Remote",
+      "department": "Creative Services",
+      "overview": "Create photorealistic 3D renderings and visualizations for real estate properties. Transform architectural plans and concepts into compelling visual experiences that help clients envision completed projects.",
+      "responsibilities": [
+        "Create photorealistic 3D renderings from architectural plans",
+        "Develop interior and exterior visualizations",
+        "Model furniture, fixtures, and architectural details",
+        "Apply appropriate materials, textures, and lighting",
+        "Produce high-quality final renders for marketing use",
+        "Collaborate with architects, designers, and photographers",
+        "Iterate on designs based on client feedback",
+        "Maintain organized project files and asset libraries"
+      ],
+      "requirements": [
+        "3+ years experience in 3D architectural visualization",
+        "Proficiency in 3D software (3ds Max, Blender, Cinema 4D, or similar)",
+        "Strong understanding of lighting and rendering techniques",
+        "Experience with V-Ray, Corona, or similar rendering engines",
+        "Portfolio demonstrating photorealistic architectural renders",
+        "Knowledge of architectural principles and construction",
+        "Excellent attention to detail and quality standards",
+        "Ability to interpret 2D plans and create 3D models"
+      ],
+      "skills": [
+        "3D modeling",
+        "Photorealistic rendering",
+        "Architectural visualization",
+        "3ds Max/Blender",
+        "V-Ray/Corona Renderer",
+        "Lighting design",
+        "Texture mapping",
+        "Post-production",
+        "Technical drawing interpretation",
+        "Asset creation"
+      ],
+      "benefits": [
+        "Work on cutting-edge visualization projects",
+        "Flexible remote work environment",
+        "Opportunity to work with top-tier properties",
+        "Professional skill development",
+        "Creative collaboration with design teams",
+        "Competitive project compensation",
+        "Regular workflow with steady projects",
+        "Access to latest software and techniques"
+      ],
+      "compensation": {
+        "type": "Per Project",
+        "range": "€400-1500",
+        "details": "Based on render complexity, number of views, and timeline requirements. Premium rates for luxury developments and animations."
+      },
+      "equipment": [
+        "High-performance workstation/laptop",
+        "Professional 3D software licenses",
+        "High-resolution monitor (color-accurate)",
+        "Powerful graphics card (RTX/equivalent)",
+        "Minimum 32GB RAM",
+        "Fast SSD storage",
+        "Reliable internet for file transfers",
+        "Backup storage solutions"
+      ],
+      "availability": "Flexible schedule with ability to handle multiple projects",
+      "applicationProcess": [
+        "Submit application with 3D portfolio",
+        "Technical skills assessment",
+        "Portfolio review interview",
+        "Test rendering project",
+        "Software proficiency evaluation",
+        "Onboarding and project workflow training"
+      ],
+      "tags": ["3D Visualization", "Architectural Rendering", "Remote", "Freelance"],
+      "isActive": true,
+      "publishedDate": "2025-01-15",
+      "lastUpdated": "2025-01-15"
+    },
+    {
+      "id": "videographer-remote",
+      "title": "Freelance Videographer",
+      "slug": "videographer",
+      "category": "Video Production",
+      "type": "Freelance",
+      "location": "Remote",
+      "department": "Creative Services",
+      "overview": "Create compelling video content for real estate marketing including property tours, drone footage, and promotional videos. Help properties stand out in the market with professional video production services.",
+      "responsibilities": [
+        "Film professional property walkthrough videos",
+        "Capture aerial footage using drone equipment",
+        "Edit and produce final video content",
+        "Create social media optimized video formats",
+        "Coordinate filming schedules with property owners",
+        "Ensure proper lighting and audio quality",
+        "Deliver videos in required formats and specifications",
+        "Maintain and operate video equipment safely"
+      ],
+      "requirements": [
+        "2+ years experience in real estate or commercial videography",
+        "Professional video equipment (4K camera, stabilizers, etc.)",
+        "Drone pilot certification (Part 107 or equivalent)",
+        "Proficiency in video editing software (Premiere Pro, Final Cut Pro)",
+        "Strong portfolio of property and architectural videos",
+        "Knowledge of video compression and delivery formats",
+        "Excellent storytelling and visual composition skills",
+        "Reliable transportation and equipment insurance"
+      ],
+      "skills": [
+        "Property videography",
+        "Drone operation",
+        "Video editing",
+        "Adobe Premiere Pro",
+        "Final Cut Pro",
+        "4K video production",
+        "Color grading",
+        "Audio mixing",
+        "Social media optimization",
+        "Equipment maintenance"
+      ],
+      "benefits": [
+        "Dynamic and creative work environment",
+        "Opportunity to work with unique properties",
+        "Flexible scheduling around your availability",
+        "Professional equipment and technique development",
+        "Collaborative projects with creative teams",
+        "Competitive per-project compensation",
+        "Portfolio building with high-quality content",
+        "Growing demand for video marketing"
+      ],
+      "compensation": {
+        "type": "Per Project",
+        "range": "€500-2000",
+        "details": "Based on video length, complexity, drone requirements, and editing needs. Premium rates for luxury properties and rush deliveries."
+      },
+      "equipment": [
+        "Professional 4K video camera",
+        "Drone with 4K capability",
+        "Stabilization equipment (gimbal/steadicam)",
+        "Professional audio recording equipment",
+        "Lighting kit for interiors",
+        "Multiple batteries and memory cards",
+        "Video editing software licenses",
+        "High-performance computer for editing"
+      ],
+      "availability": "Flexible schedule with weekend availability for optimal lighting",
+      "applicationProcess": [
+        "Submit application with video portfolio",
+        "Portfolio review and technical assessment",
+        "Phone/video interview",
+        "Test video project",
+        "Equipment and certification verification",
+        "Safety and protocol training"
+      ],
+      "tags": ["Videography", "Drone Footage", "Real Estate", "Remote", "Freelance"],
+      "isActive": true,
+      "publishedDate": "2025-01-15",
+      "lastUpdated": "2025-01-15"
+    }
+  ]
+}

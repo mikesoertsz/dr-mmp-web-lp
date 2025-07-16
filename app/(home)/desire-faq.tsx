@@ -46,8 +46,8 @@ export default function DesireFAQ() {
 
   return (
     <Wrapper id="faq" className={`py-12 md:py-32 min-h-[50dvh]`}>
-      <InnerWrap className="flex flex-col md:flex-row gap-8 h-full">
-        <div className="md:w-1/3 flex flex-col items-start justify-start h-full">
+      <InnerWrap className="flex flex-col md:flex-row gap-8 h-full w-full">
+        <div className="md:w-1/3 flex flex-col">
           <TitleBlock
             preheading="Common Questions"
             heading="FAQs"

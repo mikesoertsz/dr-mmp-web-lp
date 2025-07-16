@@ -35,9 +35,9 @@ export default function InterestPartners() {
           />
         </div>
         <div className="flex flex-col items-center justify-center gap-8">
-          <div className="flex items-center justify-center gap-12 flex-wrap">
+          <ul className="flex items-center justify-center gap-10">
             {partners.map((partner, index) => (
-              <div
+              <li
                 key={index}
                 className="flex aspect-video items-center justify-center relative h-20"
               >
@@ -49,9 +49,9 @@ export default function InterestPartners() {
                     height={partner.height}
                   />
                 </a>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </InnerWrap>
     </Wrapper>

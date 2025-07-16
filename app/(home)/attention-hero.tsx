@@ -1,12 +1,9 @@
 "use client";
 
+import { InnerWrap, Wrapper } from "@/app/(shared)/atoms";
+import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import Image from "next/image";
-import { InnerWrap, Wrapper } from "@/app/(shared)/atoms";
-import { TitleBlock } from "@/app/(shared)/titleblock";
-import { Button } from "@/components/ui/button";
-// @ts-expect-error: No types for react-rotating-text
-import ReactRotatingText from "react-rotating-text";
 
 type HeroSectionContentType = {
   headings: {
@@ -118,17 +115,16 @@ export default function HeroSection() {
     >
       <InnerWrap className="flex flex-col w-full items-center justify-center max-w-7xl">
         <div className="w-full flex flex-col items-center justify-center my-32">
-          <TitleBlock
-            heading={content.headings.heading}
-            theme="light"
-            orientation="center"
-          />
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="text-6xl lg:text-[5rem] tracking-tight font-recoleta text-stone-700/80">
+              Sell Properties.
+            </h1>
+            <h1 className="text-6xl lg:text-[5rem] tracking-tight font-recoleta text-stone-900">
+              5x Faster.
+            </h1>
+          </div>
           <div className="text-2xl subpixel-antialiased font-light font-poppins text-stone-500 mt-2 text-center">
-            Real estate marketing that emotionally hooks{" "}
-            <span className="inline-block align-baseline font-medium tracking-tight text-indigo-500">
-              <ReactRotatingText items={["buyers", "sellers", "tenants"]} />
-            </span>
-            .
+            Real estate marketing that emotionally hooks.
           </div>
           <div className="flex gap-4 mt-8">
             <Button className="bg-stone-800 hover:bg-stone-700 cursor-pointer transition duration-300 ease-in-out rounded-xl h-12 px-6">

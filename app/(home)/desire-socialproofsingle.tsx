@@ -47,11 +47,11 @@ export default function DesireSocialProofSingle() {
               height={60}
               className="rounded-sm my-4"
             />
-            <p className="font-semibold text-stone-900">
+            <p className="font-medium tracking-tight text-amber-900">
               {content.testimonial.name}
             </p>
             <p className="text-sm text-stone-800">{content.testimonial.role}</p>
-            <p className="text-xs">
+            <p className="text-xs text-stone-600">
               {content.testimonial.company} / {content.testimonial.location}
             </p>
           </div>
