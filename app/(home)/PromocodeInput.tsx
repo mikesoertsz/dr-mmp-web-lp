@@ -44,7 +44,7 @@ export default function PromocodeInput({
       <Input
         type="text"
         placeholder="Have a promocode?"
-        className="text-xs text-stone-500"
+        className="text-sm font-medium text-stone-900 relative focus-none outline-none font-inter"
         value={promocode}
         onChange={(e) => {
           setPromocode(e.target.value.toUpperCase());
@@ -58,15 +58,10 @@ export default function PromocodeInput({
       {promocode && touched && !isValidPromocode && (
         <span className="text-xs text-red-500">Invalid promocode</span>
       )}
-      <div
-        style={{
-          position: "absolute",
-          right: 8,
-          top: "50%",
-          transform: "translateY(-50%)",
-        }}
-      >
-        {showCheck && <Check className="h-4 w-4 text-green-600" />}
+      <div className="absolute right-0 flex h-full aspect-square items-center justify-center">
+        {showCheck && (
+          <Check className="text-green-600" size={16} strokeWidth={2} />
+        )}
       </div>
     </div>
   );

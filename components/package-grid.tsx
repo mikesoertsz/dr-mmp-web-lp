@@ -4,9 +4,6 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Camera, Layout, Image, Cuboid, Footprints, Film, Bone as Drone } from "lucide-react";
-import { useCartStore } from "@/lib/store";
-import { pricing } from "@/lib/pricing";
-import { useTranslation } from "@/lib/translations";
 
 const icons = {
   "camera": Camera,
@@ -18,12 +15,48 @@ const icons = {
   "drone": Drone
 };
 
-export function PackageGrid() {
-  const { addItem } = useCartStore();
-  const { t } = useTranslation();
+const pricing = {
+  services: {
+    "photography": {
+      icon: "camera",
+      packages: [
+        {
+          id: "basic",
+          name: "Basic Photography",
+          price: 299,
+          description: "Professional photos for your property",
+          features: ["15-25 photos", "Basic editing", "High resolution", "24h delivery"],
+          popular: false
+        },
+        {
+          id: "premium",
+          name: "Premium Photography",
+          price: 499,
+          description: "Enhanced photography package",
+          features: ["30-50 photos", "Advanced editing", "HDR processing", "Same day delivery"],
+          popular: true
+        }
+      ]
+    },
+    "video": {
+      icon: "film",
+      packages: [
+        {
+          id: "basic-video",
+          name: "Basic Video",
+          price: 599,
+          description: "Professional video tour",
+          features: ["2-3 minute video", "Basic editing", "HD quality", "Music included"],
+          popular: false
+        }
+      ]
+    }
+  }
+};
 
+export function PackageGrid() {
   const handleAddToCart = (pkg: any, serviceId: string) => {
-    addItem({
+    console.log("Adding to cart:", {
       name: pkg.name,
       price: pkg.price,
       description: pkg.description,
@@ -37,10 +70,10 @@ export function PackageGrid() {
         <div key={serviceId} className="space-y-6">
           <div className="border-b border-slate-200 dark:border-slate-800 pb-4">
             <h2 className="text-lg font-medium text-slate-900 dark:text-slate-100">
-              {t(`services.${serviceId.replace('-', '')}.name`)}
+              {serviceId.charAt(0).toUpperCase() + serviceId.slice(1)}
             </h2>
             <p className="text-slate-600 dark:text-slate-400 mt-1 text-sm">
-              {t(`services.${serviceId.replace('-', '')}.description`)}
+              Professional {serviceId} services for your property
             </p>
           </div>
           
@@ -83,7 +116,7 @@ export function PackageGrid() {
                       className={`w-full text-sm ${pkg.popular ? 'bg-blue-600 hover:bg-blue-700' : 'bg-slate-600 hover:bg-slate-700'}`}
                       onClick={() => handleAddToCart(pkg, serviceId)}
                     >
-                      {t('common.addToCart')}
+                      Add to Cart
                     </Button>
                   </CardFooter>
                 </Card>

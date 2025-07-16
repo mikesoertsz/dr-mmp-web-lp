@@ -7,9 +7,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import {
   Camera,
-  Home,
-  Video,
-  Palette,
   MapPin,
   Clock,
   Euro,
@@ -53,6 +50,21 @@ interface JobPageProps {
     slug: string;
   };
 }
+
+// Icon and color maps for job slugs
+const iconMap = {
+  photographer: Camera,
+  videographer: Camera, // Replace with Video if you want a different icon
+  designer: Briefcase,
+  // Add more mappings as needed
+};
+
+const colorMap = {
+  photographer: "bg-yellow-100 text-yellow-800",
+  videographer: "bg-blue-100 text-blue-800",
+  designer: "bg-green-100 text-green-800",
+  // Add more mappings as needed
+};
 
 function JobOverview({ job }: { job: Job }) {
   const Icon = iconMap[job.slug as keyof typeof iconMap] || Camera;

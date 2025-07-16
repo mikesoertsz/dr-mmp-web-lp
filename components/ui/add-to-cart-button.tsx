@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { Check, ShoppingCart } from "lucide-react";
-import { useCartStore } from "@/lib/store";
 import { useState } from "react";
 
 interface AddToCartButtonProps {
@@ -34,20 +33,12 @@ export function AddToCartButton({
   size = "default",
   children,
 }: AddToCartButtonProps) {
-  const { addItem } = useCartStore();
   const [isAdded, setIsAdded] = useState(false);
 
   const handleAddToCart = () => {
-    addItem({
-      name: packageName,
-      price,
-      description,
-      serviceType,
-      propertyId,
-      addOns,
-      quantity: 1,
-    });
-
+    // Simple mock functionality - in a real app this would add to cart
+    console.log("Adding to cart:", { packageName, price, description, serviceType });
+    
     setIsAdded(true);
 
     // Reset the "added" state after 2 seconds

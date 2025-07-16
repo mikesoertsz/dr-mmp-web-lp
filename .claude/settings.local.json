@@ -3,7 +3,11 @@
     "allow": [
       "Bash(mkdir:*)",
       "WebFetch(domain:www.airbnb.com)",
-      "WebFetch(domain:commons.wikimedia.org)"
+      "WebFetch(domain:commons.wikimedia.org)",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(rm:*)",
+      "Bash(npm run build:*)"
     ],
     "deny": []
   }

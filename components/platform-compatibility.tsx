@@ -2,7 +2,6 @@
 
 import { InnerWrap, Wrapper } from "@/app/(shared)/atoms";
 import { TitleBlock } from "@/app/(shared)/titleblock";
-import { useTranslation } from "@/lib/translations";
 import { CheckCircle } from "lucide-react";
 
 const platforms = {
@@ -40,7 +39,6 @@ const platforms = {
 };
 
 export default function PlatformCompatibility() {
-  const { t } = useTranslation();
 
   return (
     <Wrapper id="platforms" className="py-16 md:py-24">

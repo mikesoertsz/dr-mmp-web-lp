@@ -76,7 +76,7 @@ export default function PricingSingle({ pricing }: { pricing?: PricingData }) {
 
   return (
     <Wrapper className="min-h-[60dvh] py-24 group" id="pricing">
-      <InnerWrap className="bg-[#FAF7F2] group-hover:bg-white transition duration-5000 group-hover:shadow-lg ease-in-out rounded-2xl overflow-hidden border border-stone-500/20 w-full">
+      <InnerWrap className="bg-[#F7F0E8] group-hover:bg-white transition duration-500 group-hover:shadow-lg ease-in-out rounded-2xl overflow-hidden border border-stone-500/20 w-full">
         <div className="grid grid-cols-1 md:grid-cols-3 w-full relative ">
           <div className="flex flex-col col-span-2 items-start justify-between p-12 border-r border-stone-300/40">
             <div>
@@ -176,40 +176,42 @@ export default function PricingSingle({ pricing }: { pricing?: PricingData }) {
                 )}
               </div>
             </div>
-            {/* Promocode Input */}
-            <PromocodeInput
-              promocodeConfig={PROMOCODE}
-              onChange={(_, isValid) => {
-                setIsValidPromocode(isValid);
-              }}
-            />
-            <a
-              href={stripeURL}
-              className={`bg-black w-full hover:bg-stone-800 transition duration-200 ease-in-out text-white py-2 rounded-sm cursor-pointer px-4 flex justify-between items-center text-center group mt-2 ${
-                !pricingsingle.offerActive
-                  ? "opacity-50 pointer-events-none"
-                  : ""
-              }`}
-              aria-disabled={!pricingsingle.offerActive}
-            >
-              <span className="group-hover:translate-x-1 duration-200 ease-in transition">
-                {pricingsingle.buttonText}
-              </span>
-              <span className="pl-8 font-semibold">
-                €{discountedPrice.toLocaleString()}
-              </span>
-            </a>
-            <p className="text-xs text-gray-800 flex items-center justify-center gap-1 mt-3">
-              Secure payments with{" "}
-              <Image
-                src="/img/stripe.svg"
-                alt="Stripe"
-                width={36}
-                height={15}
-                className=""
+            <div className="flex flex-col gap-1 w-full">
+              {/* Promocode Input */}
+              <PromocodeInput
+                promocodeConfig={PROMOCODE}
+                onChange={(_, isValid) => {
+                  setIsValidPromocode(isValid);
+                }}
               />
-              .
-            </p>
+              <a
+                href={stripeURL}
+                className={`bg-black w-full hover:bg-stone-800 transition duration-200 ease-in-out text-white py-2 rounded-sm cursor-pointer px-4 flex justify-between items-center text-center group mt-2 ${
+                  !pricingsingle.offerActive
+                    ? "opacity-50 pointer-events-none"
+                    : ""
+                }`}
+                aria-disabled={!pricingsingle.offerActive}
+              >
+                <span className="group-hover:translate-x-1 duration-200 ease-in transition">
+                  {pricingsingle.buttonText}
+                </span>
+                <span className="pl-8 font-semibold">
+                  €{discountedPrice.toLocaleString()}
+                </span>
+              </a>
+              <p className="text-xs text-gray-800 flex items-center justify-center gap-1 mt-3">
+                Secure payments with{" "}
+                <Image
+                  src="/img/stripe.svg"
+                  alt="Stripe"
+                  width={36}
+                  height={15}
+                  className=""
+                />
+                .
+              </p>
+            </div>
           </div>
         </div>
       </InnerWrap>

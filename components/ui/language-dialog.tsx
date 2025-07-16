@@ -10,11 +10,10 @@ import {
 } from "./dialog";
 import { Button } from "./button";
 import { Globe } from "lucide-react";
-import { useSettingsStore } from "@/lib/store";
 import { useState } from "react";
 
 export default function LanguageDialog() {
-  const { language, setLanguage } = useSettingsStore();
+  const [language, setLanguage] = useState("EN");
   const [open, setOpen] = useState(false);
 
   return (

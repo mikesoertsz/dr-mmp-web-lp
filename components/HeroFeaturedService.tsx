@@ -1,11 +1,20 @@
+import { Preheading } from "@/app/(shared)/atoms";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { cn } from "@/lib/utils";
+import { CheckCircle } from "lucide-react";
 
 // Self-contained content for the featured service
 const featuredService = {
   videoSrc: "/video/room2.mp4",
-  heading: "Video & AI",
+  preheading: "New & Popular",
+  heading: "AI Avatar Videos",
   description: "Real, edited video to showcase your listing.",
+  features: [
+    "Show your target audience in your listing",
+    "Showcase listing selling-points.",
+    "Scroll-stopping videos proven to get more views.",
+    "Emotionally impact potential customers.",
+  ],
 };
 
 export default function HeroFeaturedService() {
@@ -18,7 +27,7 @@ export default function HeroFeaturedService() {
           )}
         >
           <AnimatedGradientText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300">
-            <span>New & Popular</span>
+            <span>{featuredService.preheading}</span>
           </AnimatedGradientText>
         </div>
       </div>
@@ -34,16 +43,33 @@ export default function HeroFeaturedService() {
       </div>
       <div className="relative z-20 flex flex-col w-full p-4 h-full gap-4">
         <div className="flex flex-col items-start justify-start gap-1 bg-[#F0E6DC] rounded-xl p-8 h-full">
-          <h3 className="text-lg font-semibold">{featuredService.heading}</h3>
+          <Preheading className="text-stone-400/80">
+            {featuredService.preheading}
+          </Preheading>
+          <h3 className="text-lg font-medium font-recoleta subpixel-antialiased">
+            {featuredService.heading}
+          </h3>
           <p className="text-sm text-stone-600">
             {featuredService.description}
           </p>
+          <ul className="flex flex-col w-full gap-2 pt-4">
+            {featuredService.features.map((feature, index) => (
+              <li
+                key={index}
+                className="text-sm text-stone-600 flex gap-2 items-center border-b border-stone-300/30 pb-2"
+              >
+                <CheckCircle
+                  size={16}
+                  className="text-stone-500/80"
+                  strokeWidth={1.5}
+                />
+                {feature}
+              </li>
+            ))}
+          </ul>
         </div>
         <div className="flex flex-col items-start justify-start gap-1 bg-[#F0E6DC] rounded-xl p-8 h-full">
-          <h3 className="text-lg font-semibold">{featuredService.heading}</h3>
-          <p className="text-sm text-stone-600">
-            {featuredService.description}
-          </p>
+          second div
         </div>
       </div>
     </li>

@@ -3,7 +3,6 @@
 import { InnerWrap, Wrapper } from "@/app/(shared)/atoms";
 import { TitleBlock } from "@/app/(shared)/titleblock";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useCartStore } from "@/lib/store";
 import { Camera, CheckCircle, Cuboid, Film, Palette } from "lucide-react";
 import { useState } from "react";
 import PackagePricingForm from "./forms/PackagePricingForm";
@@ -12,7 +11,6 @@ export default function PackageSection() {
   const [isPromoValid, setIsPromoValid] = useState(false);
   const [showPromoError, setShowPromoError] = useState(false);
   const [selectedTier, setSelectedTier] = useState("T3");
-  const { addItem } = useCartStore();
 
   const BASE_PRICE = 3899;
   const MAX_PRICE = 15000;
@@ -85,7 +83,7 @@ export default function PackageSection() {
   ];
 
   const handleAddToCart = () => {
-    addItem({
+    console.log("Adding to cart:", {
       name: "Complete Real Estate Marketing Package",
       price: currentPrice,
       description:

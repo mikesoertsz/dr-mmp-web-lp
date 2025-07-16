@@ -2,8 +2,9 @@
 
 import { Heading, InnerWrap, Preheading, Wrapper } from "@/app/(shared)/atoms";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Loader } from "lucide-react";
 
 const benefits = {
   titleblock: {
@@ -52,8 +53,15 @@ const benefits = {
 export default function InterestBenefits() {
   const defaultImage = benefits.list[0].image;
   const [currentImage, setCurrentImage] = useState(defaultImage);
+  const [loading, setLoading] = useState(true);
 
-  // Handles for both columns
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const handleMouseEnter = (image: string) => {
     setCurrentImage(image);
   };
@@ -65,6 +73,19 @@ export default function InterestBenefits() {
   return (
     <Wrapper id="benefits" className="py-16 md:pt-24 mb:pb-0">
       <InnerWrap>
+        {/* Preload all benefit images */}
+        <div className="hidden">
+          {benefits.list.map((item, idx) => (
+            <Image
+              key={item.image}
+              src={item.image}
+              alt={item.title}
+              width={400}
+              height={300}
+              priority={idx === 0}
+            />
+          ))}
+        </div>
         <div className="flex flex-col items-center justify-center w-full">
           <Preheading>{benefits.titleblock.preheading}</Preheading>
           <Heading className="mt-4">{benefits.titleblock.heading}</Heading>
@@ -97,28 +118,32 @@ export default function InterestBenefits() {
               ))}
             </ul>
           </div>
-          <div className="relative overflow-hidden col-span-1 flex flex-col items-center justify-center h-full rounded-xl bg-white transition duration-3000 ease-in-out">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentImage}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.25 }}
-                className="absolute inset-8"
-              >
-                <Image
-                  src={currentImage}
-                  alt="Benefits"
-                  fill
-                  className="absolute inset-0"
-                  style={{
-                    objectFit: "cover",
-                    objectPosition: "center",
-                  }}
-                />
-              </motion.div>
-            </AnimatePresence>
+          <div className="relative overflow-hidden col-span-1 flex flex-col items-center justify-center h-full rounded-xl bg-[#F7F0E8] transition duration-3000 ease-in-out">
+            {loading ? (
+              <Loader className="animate-spin text-stone-600" size={24} />
+            ) : (
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentImage}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.25 }}
+                  className="absolute inset-8"
+                >
+                  <Image
+                    src={currentImage}
+                    alt="Benefits"
+                    fill
+                    className="absolute inset-0 mix-blend-darken"
+                    style={{
+                      objectFit: "cover",
+                      objectPosition: "center",
+                    }}
+                  />
+                </motion.div>
+              </AnimatePresence>
+            )}
           </div>
           <div className="col-span-1 flex flex-col items-center justify-center h-full">
             <ul className="flex flex-col gap-6 h-full">

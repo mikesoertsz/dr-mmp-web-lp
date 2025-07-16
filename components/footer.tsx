@@ -3,11 +3,9 @@
 import Link from "next/link";
 import { Building, Mail, Phone, MapPin, Calendar } from "lucide-react";
 import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
-import { useTranslation } from "@/lib/translations";
 import { InnerWrap } from "@/app/(shared)/atoms";
 
 export function Footer() {
-  const { t } = useTranslation();
 
   const currentYear = new Date().getFullYear();
 

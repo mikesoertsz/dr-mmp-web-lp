@@ -1,3 +1,4 @@
+"use client";
 import {
   Box,
   Camera,
@@ -10,6 +11,8 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { InnerWrap, Preheading, Wrapper } from "../(shared)/atoms";
+import { useRef } from "react";
+import { motion, useInView } from "motion/react";
 
 const included = {
   titleblock: {
@@ -23,61 +26,87 @@ const included = {
       title: "2D Photography",
       description:
         "Capture stunning 2D images to showcase your property effectively.",
-      icon: <Camera size={20} />,
+      icon: <Camera size={24} className="text-stone-600" strokeWidth={1.5} />,
     },
     {
       title: "Videos",
       description:
         "Create engaging video content to highlight property features.",
-      icon: <Video size={20} />,
+      icon: <Video size={24} className="text-stone-600" strokeWidth={1.5} />,
     },
     {
       title: "Virtual Tour",
       description:
         "Offer immersive virtual tours for a comprehensive property view.",
-      icon: <Rotate3d size={20} />,
+      icon: <Rotate3d size={24} className="text-stone-600" strokeWidth={1.5} />,
     },
     {
       title: "Interior Design",
       description: "Enhance spaces with professional interior design services.",
-      icon: <Home size={20} />,
+      icon: <Home size={24} className="text-stone-600" strokeWidth={1.5} />,
     },
     {
       title: "3D Renders",
       description: "Visualize properties with high-quality 3D renderings.",
-      icon: <Box size={20} />,
+      icon: <Box size={24} className="text-stone-600" strokeWidth={1.5} />,
     },
     {
       title: "AI Renders",
       description: "Utilize AI technology for advanced property renderings.",
-      icon: <Cpu size={20} />,
+      icon: <Cpu size={24} className="text-stone-600" strokeWidth={1.5} />,
     },
     {
       title: "Floorplan Designs",
       description: "Detailed floorplan designs to illustrate property layout.",
-      icon: <Layout size={20} />,
+      icon: <Layout size={24} className="text-stone-600" strokeWidth={1.5} />,
     },
     {
       title: "Explainer Video",
       description:
         "Informative explainer videos to communicate property details.",
-      icon: <Film size={20} />,
+      icon: <Film size={24} className="text-stone-600" strokeWidth={1.5} />,
     },
   ],
 };
 
 export default function DesireIncluded() {
+  const listRef = useRef<HTMLUListElement>(null);
+  const isInView = useInView(listRef, { once: true, margin: "-50px" });
   return (
     <Wrapper>
       <InnerWrap className="">
-        <Preheading className="text-center mb-12 text-stone-800">
-          What&apos;s in the Package?
-        </Preheading>
-        <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#F7F0E8] rounded-2xl overflow-hidden min-h-[30dvh] w-full p-12">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.5, delay: 0 }}
+        >
+          <Preheading className="text-center mb-12 text-stone-800">
+            What&apos;s in the Package?
+          </Preheading>
+        </motion.div>
+        <motion.ul
+          ref={listRef}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#F7F0E8] rounded-2xl overflow-hidden min-h-[30dvh] w-full p-4"
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.12,
+                delayChildren: 0.2,
+              },
+            },
+          }}
+        >
           {included.items.map((item, index) => (
-            <li
+            <motion.li
               key={index}
-              className="flex items-center gap-3 p-4 hover:bg-white duration-200 ease-in-out transition cursor-pointer border border-stone-300/10 hover:border-stone-300/40 rounded-sm w-full"
+              className="flex items-center gap-3 p-4 hover:bg-white duration-200 ease-in-out transition cursor-pointer border border-stone-300/10 hover:border-stone-300/40 rounded-lg w-full"
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+              }}
             >
               <div className="flex items-center justify-center p-4 aspect-video relative">
                 <div className="absolute inset-0 w-full h-full flex items-center justify-center">
@@ -86,7 +115,7 @@ export default function DesireIncluded() {
                     alt={item.title}
                     width={100}
                     height={100}
-                    className=""
+                    className="opacity-20"
                   />
                 </div>
                 {item.icon}
@@ -95,13 +124,13 @@ export default function DesireIncluded() {
                 <h3 className="font-medium tracking-tight text-sm mb-1 font-title subpixel-antialiased">
                   {item.title}
                 </h3>
-                <p className=" text-xs text-stone-500 font-medium">
+                <p className=" text-sm max-w-lg text-stone-500 font-medium">
                   {item.description}
                 </p>
               </div>
-            </li>
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </InnerWrap>
     </Wrapper>
   );

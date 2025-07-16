@@ -1,3 +1,4 @@
+"use client";
 import {
   Building2,
   ChartNetwork,
@@ -5,6 +6,8 @@ import {
   Warehouse,
 } from "lucide-react";
 import { InnerWrap, Preheading, SubHeading, Wrapper } from "../(shared)/atoms";
+import { useRef } from "react";
+import { motion, useInView } from "motion/react";
 
 const whoFor = {
   titleblock: {
@@ -40,23 +43,56 @@ const whoFor = {
   ],
 };
 
+const listVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.1,
+      duration: 0.3,
+    },
+  }),
+};
+
 export default function DesireWhoFor() {
+  const listRef = useRef<HTMLUListElement>(null);
+  const isInView = useInView(listRef, { once: true, margin: "-50px" });
   return (
     <Wrapper>
       <InnerWrap className="">
         <div className="mb-12">
-          <Preheading className="text-center text-stone-800 mb-2">
-            {whoFor.titleblock.preheading}
-          </Preheading>
-          <SubHeading className="max-w-lg mx-auto text-center">
-            {whoFor.titleblock.subheading}
-          </SubHeading>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.5, delay: 0 }}
+          >
+            <Preheading className="text-center text-stone-800 mb-2">
+              {whoFor.titleblock.preheading}
+            </Preheading>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+          >
+            <SubHeading className="max-w-lg mx-auto text-center">
+              {whoFor.titleblock.subheading}
+            </SubHeading>
+          </motion.div>
         </div>
-        <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#F7F0E8] rounded-2xl overflow-hidden min-h-[30dvh] w-full p-12">
+        <ul
+          ref={listRef}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#F7F0E8] rounded-2xl overflow-hidden min-h-[30dvh] w-full p-12"
+        >
           {whoFor.items.map((item, index) => (
-            <li
+            <motion.li
               key={index}
               className="flex gap-3 items-center justify-start h-full"
+              custom={index}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              variants={listVariants}
             >
               <div className="flex items-center justify-center w-14 h-14 bg-yellow-200 aspect-square rounded-full mb-2">
                 <span className="text-lg font-medium font-mono">
@@ -70,7 +106,7 @@ export default function DesireWhoFor() {
                   {item.description}
                 </p>
               </div>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </InnerWrap>

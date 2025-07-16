@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Play } from "lucide-react";
 import React from "react";
 
@@ -16,7 +16,7 @@ export default function PlayButton({ isHovered, className }: PlayButtonProps) {
       }
       initial={{ rotate: 0 }}
       animate={{ rotate: isHovered ? 360 : 0 }}
-      transition={{ duration: 2, loop: Infinity }}
+      transition={{ duration: 2, repeat: Infinity }}
     >
       <svg className="absolute" width="40" height="40" viewBox="0 0 40 40">
         <circle

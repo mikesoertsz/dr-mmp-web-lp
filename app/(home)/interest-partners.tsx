@@ -27,6 +27,13 @@ export default function InterestPartners() {
       link: "https://www.airbnb.com",
       alt: "Airbnb",
     },
+    {
+      icon: "/img/logos/other/jamesedition.svg",
+      width: 140,
+      height: 100,
+      link: "https://www.jamesedition.com",
+      alt: "JamesEdition",
+    },
   ];
 
   return (
