@@ -6,7 +6,7 @@ import Link from "next/link";
 const menuItems = [
   { href: "#benefits", label: "Benefits" },
   { href: "#how-it-works", label: "How it works" },
-  { href: "#packages", label: "Pricing" },
+  { href: "#pricing", label: "Pricing" },
   { href: "#faq", label: "FAQ" },
 ];
 
@@ -34,7 +34,7 @@ export default function TopNavbar() {
                     .getElementById(item.href.substring(1))
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="flex items-center gap-1 text-xs text-slate-700 hover:text-blue-600 transition-colors"
+                className="flex items-center gap-1 text-xs font-inter text-stone-700 hover:text-stone-900 transition duration-200 ease-in-out cursor-pointer"
               >
                 {item.label}
               </a>
@@ -42,7 +42,15 @@ export default function TopNavbar() {
           </div>
           {/* Right Side Controls */}
           <div className="flex items-center gap-1">
-            <a href="#packages">
+            <a
+              href="#packages"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("pricing")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               <Button
                 className="text-xs px-3 py-1 h-7 min-h-0 cursor-pointer rounded-sm bg-[#F0E6DC] hover:bg-[#E8DED3]"
                 variant="secondary"
