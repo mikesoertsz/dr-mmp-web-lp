@@ -21,9 +21,7 @@ export default function Home() {
       <DesireWhoFor />
       <DesireSocialProofSingle />
       <DesireFAQ />
-      <div id="pricing">
-        <PricingSingle />
-      </div>
+      <PricingSingle />
     </main>
   );
 }

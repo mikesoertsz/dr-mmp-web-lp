@@ -7,18 +7,25 @@ import { TitleBlock } from "@/app/(shared)/titleblock";
 export default function InterestPartners() {
   const partners = [
     {
-      icon: "/logos/realestate/wide/century21_wide.svg",
-      width: 400,
-      height: 200,
+      icon: "/img/logos/realestate/wide/century21_wide.svg",
+      width: 150,
+      height: 100,
       link: "https://www.century21.com",
       alt: "Century 21",
     },
     {
-      icon: "/logos/realestate/wide/idealista.svg",
-      width: 150,
+      icon: "/img/logos/realestate/wide/idealista.svg",
+      width: 110,
       height: 100,
       link: "https://www.idealista.com",
       alt: "Idealista",
+    },
+    {
+      icon: "/img/logos/other/airbnb.svg",
+      width: 110,
+      height: 100,
+      link: "https://www.airbnb.com",
+      alt: "Airbnb",
     },
   ];
 
@@ -27,32 +34,35 @@ export default function InterestPartners() {
       <InnerWrap>
         <div className="w-full flex flex-col items-center justify-center mb-8">
           <TitleBlock
-            preheading="Our Partners"
+            preheading="Partners"
             heading=""
             body=""
             theme="light"
             orientation="center"
           />
         </div>
-        <div className="flex flex-col items-center justify-center gap-8">
-          <ul className="flex items-center justify-center gap-10">
-            {partners.map((partner, index) => (
-              <li
-                key={index}
-                className="flex aspect-video items-center justify-center relative h-20"
+        <ul className="flex items-center justify-center gap-4">
+          {partners.map((partner, index) => (
+            <li
+              key={index}
+              className="flex items-center justify-center relative h-20 bg-[#F7F0E8] rounded-2xl px-8 py-4"
+            >
+              <a
+                href={partner.link}
+                target="_blank"
+                rel="noopener noreferre"
+                className="relative flex items-center justify-center"
               >
-                <a href={partner.link} target="_blank" rel="noopener noreferre">
-                  <Image
-                    src={partner.icon}
-                    alt={partner.alt}
-                    width={partner.width}
-                    height={partner.height}
-                  />
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+                <Image
+                  src={partner.icon}
+                  alt={partner.alt}
+                  width={partner.width}
+                  height={partner.height}
+                />
+              </a>
+            </li>
+          ))}
+        </ul>
       </InnerWrap>
     </Wrapper>
   );

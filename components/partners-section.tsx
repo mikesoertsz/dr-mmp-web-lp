@@ -18,6 +18,10 @@ export default function PartnersSection() {
       icon: "/logos/realestate/wide/idealista_wide.png",
       link: "https://www.idealista.com",
     },
+    {
+      icon: "/img/logos/airbnb_wide.svg",
+      link: "https://www.airbnb.com",
+    },
   ];
 
   return (

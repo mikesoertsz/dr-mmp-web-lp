@@ -4,6 +4,7 @@ import { InnerWrap, Wrapper } from "@/app/(shared)/atoms";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import Image from "next/image";
+import HeroFeaturedService from "@/components/HeroFeaturedService";
 
 type HeroSectionContentType = {
   headings: {
@@ -138,7 +139,8 @@ export default function HeroSection() {
             </Button>
           </div>
         </div>
-        <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full mt-12">
+        <ul className="grid grid-cols-1 md:grid-cols-3 gap-2 w-full mt-12">
+          <HeroFeaturedService />
           {content.serviceslist
             .filter((service) => service.preheading !== "4D")
             .map((service) => (
@@ -192,46 +194,6 @@ export default function HeroSection() {
                 </div>
               </li>
             ))}
-          <li className="relative text-left grid grid-cols-1 md:grid-cols-2 gap-4 items-start justify-end overflow-hidden col-span-3 rounded-lg bg-[#F5ECE4]">
-            <div className="relative aspect-square flex w-full">
-              <video
-                src={
-                  content.serviceslist.find(
-                    (service) => service.preheading === "4D"
-                  )?.image
-                }
-                className="absolute inset-0 mix-blend-multiply"
-                muted
-                loop
-                autoPlay
-                playsInline
-              />
-            </div>
-            <div className="relative z-20 flex flex-col w-full p-8">
-              <span className="text-[11px] text-green-700 uppercase font-medium tracking-widest">
-                4D
-              </span>
-              <div className="flex flex-col items-start justify-start gap-1">
-                <h3 className="text-lg font-semibold">Video & AI</h3>
-                <p className="text-sm text-stone-600">
-                  Real, edited video to showcase your listing.
-                </p>
-                <ul className="flex flex-col items-start justify-start gap-0.5 mt-2">
-                  {content.serviceslist
-                    .find((service) => service.preheading === "4D")
-                    ?.list.map((item) => (
-                      <li
-                        key={item}
-                        className="text-xs text-stone-600 flex gap-1"
-                      >
-                        <Check size={16} className="text-green-600" />
-                        {item}
-                      </li>
-                    ))}
-                </ul>
-              </div>
-            </div>
-          </li>
         </ul>
       </InnerWrap>
     </Wrapper>

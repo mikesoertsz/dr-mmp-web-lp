@@ -1,37 +1,41 @@
-import React from "react";
-import { InnerWrap, Wrapper } from "../(shared)/atoms";
-import { Users, Briefcase, DollarSign, TrendingUp } from "lucide-react";
+import {
+  Building2,
+  ChartNetwork,
+  SquareUserRound,
+  Warehouse,
+} from "lucide-react";
+import { InnerWrap, Preheading, SubHeading, Wrapper } from "../(shared)/atoms";
 
 const whoFor = {
   titleblock: {
     preheading: "Who is this for?",
-    heading:
-      "It's aimed at people who want to use Framer in some professional capacity.",
+    subheading:
+      "A service for anyone looking to sell their property faster, and for a higher value.",
   },
   items: [
     {
       title: "Agencies",
-      icon: <Briefcase size={32} strokeWidth={1} />,
+      icon: <Building2 size={20} strokeWidth={1.5} />,
       description:
-        "Agencies looking to streamline their design process and deliver high-quality projects efficiently.",
+        "Agencies that are looking for a competitive edge in a market with a lot of competition. MMP could be your perfect partner.",
     },
     {
       title: "Agents",
-      icon: <Users size={32} strokeWidth={1} />,
+      icon: <SquareUserRound size={20} strokeWidth={1.5} />,
       description:
-        "Freelancers who want to enhance their design capabilities and offer more to their clients.",
+        "Property agents that want to increase the value of their listings with a compelling advertising hook.",
     },
     {
-      title: "Sellers",
-      icon: <DollarSign size={32} strokeWidth={1} />,
+      title: "Owners",
+      icon: <Warehouse size={20} strokeWidth={1.5} />,
       description:
-        "Entrepreneurs aiming to create compelling prototypes to attract investors and stakeholders.",
+        "Owners that want to sell their property independently, without the need for an agent. MMP gives you the media you need to sell.",
     },
     {
       title: "Investors",
-      icon: <TrendingUp size={32} strokeWidth={1} />,
+      icon: <ChartNetwork size={20} strokeWidth={1.5} />,
       description:
-        "Startups that need to quickly iterate and validate their product ideas with interactive designs.",
+        "Investors that want to hook potential buyers or tenants with a scroll-stopping property listing.",
     },
   ],
 };
@@ -39,20 +43,33 @@ const whoFor = {
 export default function DesireWhoFor() {
   return (
     <Wrapper>
-      <InnerWrap>
-        <h2 className="text-center text-xl font-bold mb-2">
-          {whoFor.titleblock.preheading}
-        </h2>
-        <p className="text-center text-sm mb-8">{whoFor.titleblock.heading}</p>
-        <ul className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <InnerWrap className="">
+        <div className="mb-12">
+          <Preheading className="text-center text-stone-800 mb-2">
+            {whoFor.titleblock.preheading}
+          </Preheading>
+          <SubHeading className="max-w-lg mx-auto text-center">
+            {whoFor.titleblock.subheading}
+          </SubHeading>
+        </div>
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#F7F0E8] rounded-2xl overflow-hidden min-h-[30dvh] w-full p-12">
           {whoFor.items.map((item, index) => (
-            <li key={index} className="flex flex-col items-center">
-              <div className="flex items-center justify-center w-10 h-10 bg-yellow-200 rounded-full mb-2">
-                <span className="text-lg font-bold">{index + 1}</span>
+            <li
+              key={index}
+              className="flex gap-3 items-center justify-start h-full"
+            >
+              <div className="flex items-center justify-center w-14 h-14 bg-yellow-200 aspect-square rounded-full mb-2">
+                <span className="text-lg font-medium font-mono">
+                  {item.icon}
+                </span>
               </div>
-              {item.icon}
-              <h3 className="text-lg font-semibold mt-2">{item.title}</h3>
-              <p className="text-sm text-center mt-1">{item.description}</p>
+              <div className="flex flex-col items-start justify-start gap-0.5 px-4">
+                <p className="text-xs font-mono text-stone-500">0{index + 1}</p>
+                <h3 className="text-md font-semibold">{item.title}</h3>
+                <p className="text-sm leading-relaxed font-medium text-stone-500">
+                  {item.description}
+                </p>
+              </div>
             </li>
           ))}
         </ul>

@@ -26,7 +26,7 @@ const ConsultationSection = () => (
           </div>
           <div className="flex flex-col items-start justify-center mr-3">
             <span className="text-sm">Talk to a Human</span>
-            <span className="text-xs mt-1 text-left">Fabio</span>
+            <span className="text-xs mt-1 text-left">Meet Fabio</span>
           </div>
         </a>
       </div>

@@ -1,7 +1,7 @@
 import tw from "tailwind-styled-components";
 
 export const Wrapper = tw.section`mx-auto w-full py-24 snap-always snap-center flex flex-col items-center justify-center`;
-export const InnerWrap = tw.div`mx-auto max-w-7xl px-5 lg:px-0 flex flex-col items-center justify-center`;
+export const InnerWrap = tw.div`mx-auto max-w-6xl px-5 lg:px-0 flex flex-col items-center justify-center`;
 
 export const Icon = tw.div`flex items-start justify-start mb-3`;
 export const ImageWrap = tw.div`relative w-10 h-10 py-4`;

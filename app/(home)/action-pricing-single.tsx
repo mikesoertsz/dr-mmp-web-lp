@@ -75,7 +75,7 @@ export default function PricingSingle({ pricing }: { pricing?: PricingData }) {
       : pricingsingle.stripeURL || "#";
 
   return (
-    <Wrapper className="min-h-[60dvh] py-24 group">
+    <Wrapper className="min-h-[60dvh] py-24 group" id="pricing">
       <InnerWrap className="bg-[#FAF7F2] group-hover:bg-white transition duration-5000 group-hover:shadow-lg ease-in-out rounded-2xl overflow-hidden border border-stone-500/20 w-full">
         <div className="grid grid-cols-1 md:grid-cols-3 w-full relative ">
           <div className="flex flex-col col-span-2 items-start justify-between p-12 border-r border-stone-300/40">
