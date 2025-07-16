@@ -8,6 +8,7 @@ import PricingSingle from "./action-pricing-single";
 import DesireIncluded from "./desire-included";
 import ActionMidCta from "./action-mid-cta";
 import DesireWhoFor from "./desire-whofor";
+import DesireGuarantees from "./desire-guarantees";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <DesireSocialProofSingle />
       <DesireFAQ />
       <PricingSingle />
+      <DesireGuarantees />
     </main>
   );
 }

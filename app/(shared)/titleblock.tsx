@@ -50,7 +50,7 @@ export function TitleBlock({
         </Heading>
       )}
       {subheading && (
-        <SubHeading className="text-2xl subpixel-antialiased font-light font-poppins text-stone-500">
+        <SubHeading className="subpixel-antialiased font-light font-poppins text-stone-500 max-w-lg">
           {subheading}
         </SubHeading>
       )}

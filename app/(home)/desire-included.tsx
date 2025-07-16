@@ -10,7 +10,7 @@ import {
   Video,
 } from "lucide-react";
 import Image from "next/image";
-import { InnerWrap, Preheading, Wrapper } from "../(shared)/atoms";
+import { InnerWrap, Preheading, SubHeading, Wrapper } from "../(shared)/atoms";
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 
@@ -18,7 +18,7 @@ const included = {
   titleblock: {
     preheading: "Included",
     heading: "What's Included",
-    subheading: "What's Included",
+    subheading: "All packages include the following:",
     body: "What's Included",
   },
   items: [
@@ -75,18 +75,29 @@ export default function DesireIncluded() {
   return (
     <Wrapper>
       <InnerWrap className="">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.5, delay: 0 }}
-        >
-          <Preheading className="text-center mb-12 text-stone-800">
-            What&apos;s in the Package?
-          </Preheading>
-        </motion.div>
+        <div className="mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.5, delay: 0 }}
+          >
+            <Preheading className="text-center mb-4 text-stone-800">
+              What&apos;s in the Package?
+            </Preheading>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+          >
+            <SubHeading className="max-w-lg mx-auto text-center">
+              {included.titleblock.subheading}
+            </SubHeading>
+          </motion.div>
+        </div>
         <motion.ul
           ref={listRef}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#F7F0E8] rounded-2xl overflow-hidden min-h-[30dvh] w-full p-4"
+          className="grid grid-cols-1 md:grid-cols-2 gap-2 bg-[#F7F0E8] rounded-2xl overflow-hidden min-h-[30dvh] w-full p-2"
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={{
@@ -102,7 +113,7 @@ export default function DesireIncluded() {
           {included.items.map((item, index) => (
             <motion.li
               key={index}
-              className="flex items-center gap-3 p-4 hover:bg-white duration-200 ease-in-out transition cursor-pointer border border-stone-300/10 hover:border-stone-300/40 rounded-lg w-full"
+              className="flex items-center gap-3 p-4 hover:bg-white/20 duration-200 ease-in-out transition cursor-pointer border border-stone-300/10 hover:border-stone-300/40 rounded-lg w-full group"
               variants={{
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -115,7 +126,7 @@ export default function DesireIncluded() {
                     alt={item.title}
                     width={100}
                     height={100}
-                    className="opacity-20"
+                    className="opacity-20 group-hover:opacity-80 transition duration-300 ease-in-out"
                   />
                 </div>
                 {item.icon}

@@ -44,8 +44,8 @@ export default function InterestHowItWorks() {
                 key={index}
                 className="text-left flex flex-col items-start justify-start bg-[#F7F0E8] p-8 rounded-lg gap-2"
               >
-                <p className="text-xs text-stone-500/60 uppercase font-semibold tracking-wider">
-                  STEP {index + 1}
+                <p className="text-xs text-stone-500/60 uppercase font-semibold tracking-wider font-mono">
+                  0{index + 1}
                 </p>
                 <h3 className="font-medium text-2xl text-stone-900 font-recoleta subpixel-antialiased">
                   {step.title}

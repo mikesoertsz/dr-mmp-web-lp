@@ -128,12 +128,24 @@ export default function HeroSection() {
             Real estate marketing that emotionally hooks.
           </div>
           <div className="flex gap-4 mt-8">
-            <Button className="bg-stone-800 hover:bg-stone-700 cursor-pointer transition duration-300 ease-in-out rounded-xl h-12 px-6">
+            <Button
+              className="bg-stone-800 hover:bg-stone-700 cursor-pointer transition duration-300 ease-in-out rounded-xl h-12 px-6"
+              onClick={() => {
+                document
+                  .getElementById("services")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               Explore Services
             </Button>
             <Button
               variant="secondary"
               className="bg-[#F0E6DC] hover:bg-[#E8DED3] cursor-pointer  transition duration-300 ease-in-out rounded-xl h-12 px-6"
+              onClick={() => {
+                document
+                  .getElementById("pricing")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Get Started
             </Button>
