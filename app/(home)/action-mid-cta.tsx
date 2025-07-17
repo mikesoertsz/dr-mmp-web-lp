@@ -3,9 +3,9 @@ import { Wrapper } from "../(shared)/atoms";
 
 export default function ActionMidCta() {
   return (
-    <Wrapper className="flex justify-center py-12 bg-white">
+    <Wrapper className="flex justify-center py-12 px-8 bg-white">
       <div className="flex flex-col items-center justify-center gap-2">
-        <h2 className="text-3xl font-medium tracking-tight font-recoleta">
+        <h2 className="text-2xl md:text-3xl font-medium tracking-tight font-recoleta text-center">
           Show the real potential of your listing.
         </h2>
         <p className="text-sm text-stone-500">One package. One simple price.</p>

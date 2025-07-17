@@ -37,7 +37,7 @@ export default function DesireSocialProofSingle() {
         >
           <div className="flex flex-col items-center justify-center">
             <Quote className="h-8 w-8 mb-4" />
-            <p className="text-lg mb-4">{content.testimonial.text}</p>
+            <p className="text-sm sm:text-md md:text-lg mb-4">{content.testimonial.text}</p>
           </div>
           <div className="text-stone-500 flex flex-col items-center justify-center">
             <Image

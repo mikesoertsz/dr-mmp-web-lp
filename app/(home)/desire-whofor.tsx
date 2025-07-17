@@ -61,7 +61,7 @@ export default function DesireWhoFor() {
   return (
     <Wrapper>
       <InnerWrap className="">
-        <div className="mb-12">
+        <div className="mb-8 md:mb-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -88,7 +88,7 @@ export default function DesireWhoFor() {
           {whoFor.items.map((item, index) => (
             <motion.li
               key={index}
-              className="flex gap-3 items-center justify-start h-full border border-stone-300/10 hover:border-stone-300/40 rounded-lg w-full group hover:bg-white/20 duration-200 ease-in-out transition cursor-pointer p-4"
+              className="flex gap-1 md:gap-3 items-center justify-start h-full border border-stone-300/10 hover:border-stone-300/40 rounded-lg w-full group hover:bg-white/20 duration-200 ease-in-out transition cursor-pointer p-3 md:p-4"
               custom={index}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
@@ -99,12 +99,12 @@ export default function DesireWhoFor() {
                   {item.icon}
                 </span>
               </div>
-              <div className="flex flex-col items-start justify-start gap-0.5 px-4">
+              <div className="flex flex-col items-start justify-start gap-0.5 px-4 pr-0 sm:pr-4">
                 <p className="text-xs text-stone-500/60 uppercase font-semibold tracking-wider font-mono">
                   0{index + 1}
                 </p>
                 <h3 className="text-md font-semibold">{item.title}</h3>
-                <p className="text-sm leading-relaxed font-medium text-stone-500 max-w-md">
+                <p className="text-xs sm:text-sm leading-relaxed font-medium text-stone-500 max-w-md">
                   {item.description}
                 </p>
               </div>

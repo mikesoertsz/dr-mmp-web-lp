@@ -75,16 +75,20 @@ export default function PricingSingle({ pricing }: { pricing?: PricingData }) {
       : pricingsingle.stripeURL || "#";
 
   return (
-    <Wrapper className="min-h-[60dvh] py-24 group" id="pricing">
+    <Wrapper className="min-h-[60dvh] group px-5" id="pricing">
       <InnerWrap className="bg-[#F7F0E8] group-hover:bg-white transition duration-500 group-hover:shadow-lg ease-in-out rounded-2xl overflow-hidden border border-stone-500/20 w-full">
         <div className="grid grid-cols-1 md:grid-cols-3 w-full relative ">
-          <div className="flex flex-col col-span-2 items-start justify-between p-12 border-r border-stone-300/40">
+          <div className="flex flex-col col-span-2 items-start justify-between pt-6 p-4 md:p-6 lg:p-12 md:border-r border-stone-300/40">
             <div>
               <p className="text-sm text-stone-800 mb-4">
                 {pricingsingle.level}
               </p>
-              <h2 className="text-4xl tracking-tight">{pricingsingle.title}</h2>
-              <p className="text-lg mt-2">{pricingsingle.description}</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl tracking-tight">
+                {pricingsingle.title}
+              </h2>
+              <p className="text-md sm:text-lg mt-2">
+                {pricingsingle.description}
+              </p>
             </div>
             <div className="py-8">
               <p className="text-sm text-stone-800 mb-1">
@@ -140,7 +144,7 @@ export default function PricingSingle({ pricing }: { pricing?: PricingData }) {
               </ul>
             </div>
           </div>
-          <div className="flex flex-col items-start justify-between p-12 w-full">
+          <div className="flex flex-col items-start justify-between p-4 md:p-6 lg:p-12 w-full">
             <div className="w-full">
               {/* Price Display */}
               <div className="text-left">
@@ -155,7 +159,7 @@ export default function PricingSingle({ pricing }: { pricing?: PricingData }) {
                       </div>
                     </>
                   ) : (
-                    <div className="text-4xl font-medium tracking-tight text-stone-800">
+                    <div className="text-3xl lg:text-4xl font-medium tracking-tight text-stone-800">
                       €{fullPrice.toLocaleString()}
                     </div>
                   )}
