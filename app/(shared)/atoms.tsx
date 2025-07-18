@@ -6,7 +6,7 @@ export const InnerWrap = tw.div`mx-auto max-w-6xl px-5 lg:px-0 flex flex-col ite
 export const Icon = tw.div`flex items-start justify-start mb-3`;
 export const ImageWrap = tw.div`relative w-10 h-10 py-4`;
 export const Preheading = tw.h4`text-xs uppercase tracking-widest py-1 text-stone-400 font-poppins font-medium`;
-export const Heading = tw.h1`text-xl font-medium tracking-tight font-recoleta md:text-5xl my-1`;
+export const Heading = tw.h1`text-xl font-medium tracking-tight font-recoleta md:text-3xl my-1 text-stone-700`;
 export const SubHeading = tw.h2`text-xl font-light font-poppins tracking-tight subpixel-antialiased text-stone-600`;
 export const Body = tw.p`text-gray-400 max-w-xl text-sm font-body leading-relaxed font-body`;
 

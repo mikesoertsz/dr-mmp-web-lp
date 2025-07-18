@@ -1,7 +1,15 @@
+import CaseStudyHero from "./CaseStudyHero";
+import CaseStudyHook from "./CaseStudyHook";
+import CaseStudyBefore from "./CaseStudyBefore";
+import CaseStudyFAQ from "./CaseStudyFAQ";
+
 export default function CaseStudyPage() {
   return (
     <main>
-      <h1>Case Study</h1>
+      <CaseStudyHero />
+      <CaseStudyHook />
+      <CaseStudyBefore />
+      <CaseStudyFAQ />
     </main>
   );
 }
