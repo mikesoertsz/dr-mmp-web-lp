@@ -37,7 +37,7 @@ export default function InterestPartners() {
   ];
 
   return (
-    <Wrapper id="partners" className=" py-16">
+    <Wrapper id="partners" className="lg:py-16">
       <InnerWrap>
         <div className="w-full flex flex-col items-center justify-center mb-8">
           <TitleBlock
@@ -48,11 +48,11 @@ export default function InterestPartners() {
             orientation="center"
           />
         </div>
-        <ul className="flex items-center justify-center gap-4">
+        <ul className="grid grid-cols-2 sm:flex items-center justify-center gap-4">
           {partners.map((partner, index) => (
             <li
               key={index}
-              className="flex items-center justify-center relative h-20 bg-[#F7F0E8] rounded-2xl px-8 py-4"
+              className="col-span-1 flex items-center justify-center relative h-20 bg-[#F7F0E8] rounded-2xl px-8 py-4"
             >
               <a
                 href={partner.link}

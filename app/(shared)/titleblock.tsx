@@ -45,7 +45,7 @@ export function TitleBlock({
         </Preheading>
       )}
       {heading && (
-        <Heading className="font-recoleta font-light tracking-tight text-3xl md:text-5xl subpixel-antialiased">
+        <Heading className="font-recoleta font-light tracking-tight subpixel-antialiased">
           {heading}
         </Heading>
       )}

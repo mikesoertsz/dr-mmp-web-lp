@@ -45,14 +45,14 @@ export default function DesireFAQ() {
   };
 
   return (
-    <Wrapper id="faq" className={`py-12 md:py-32 min-h-[50dvh]`}>
+    <Wrapper id="faq" className={` min-h-[50dvh]`}>
       <InnerWrap className="flex flex-col md:flex-row gap-8 h-full w-full">
         <div className="md:w-1/3 flex flex-col">
           <TitleBlock
             preheading="Common Questions"
             heading="FAQs"
             theme="light"
-            orientation="left"
+            orientation="center"
             terminalTextClassName="text-orange-500"
           />
         </div>

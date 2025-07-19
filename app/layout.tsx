@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { recoleta, inter, poppins } from "@/lib/fonts";
 import "./globals.css";
+import 'swiper/css';
+import 'swiper/css/pagination';
 import TopNavbar from "./(shared)/top-navbar";
 import FooterGutter from "./(shared)/footer-gutter";
 

@@ -38,12 +38,12 @@ const guarantees = {
 export default function DesireGuarantees() {
   return (
     <Wrapper className="flex justify-center items-center py-8 bg-[#F7F0E8] border-t border-b border-stone-300/40">
-      <InnerWrap className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="col-span-1 flex flex-col items-end justify-center text-right">
-          <h4 className="text-md font-medium font-inter text-stone-900">
+      <InnerWrap className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
+        <div className="col-span-1 flex flex-col items-center md:items-end justify-center text-right">
+          <h4 className="text-center md:text-end text-md font-medium font-inter text-stone-900">
             {guarantees.left.heading}
           </h4>
-          <p className="text-sm font-inter text-stone-500">
+          <p className="text-center md:text-end text-sm font-inter text-stone-500 max-w-100">
             {guarantees.left.description}
           </p>
         </div>
@@ -60,7 +60,7 @@ export default function DesireGuarantees() {
             </li>
           ))}
         </ul>
-        <div className="col-span-1 flex flex-col items-start justify-center text-left">
+        <div className="col-span-1 flex flex-col items-center md:items-start justify-center text-left">
           <h4 className="text-md font-medium font-inter text-stone-900">
             Buy with Confidence
           </h4>

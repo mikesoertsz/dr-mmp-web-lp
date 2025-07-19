@@ -75,7 +75,7 @@ export default function DesireIncluded() {
   return (
     <Wrapper>
       <InnerWrap className="">
-        <div className="mb-12">
+        <div className="mb-8 md:mb-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -135,7 +135,7 @@ export default function DesireIncluded() {
                 <h3 className="font-medium tracking-tight text-sm mb-1 font-title subpixel-antialiased">
                   {item.title}
                 </h3>
-                <p className=" text-sm max-w-lg text-stone-500 font-medium">
+                <p className="text-xs sm:text-sm max-w-lg text-stone-500 font-medium">
                   {item.description}
                 </p>
               </div>

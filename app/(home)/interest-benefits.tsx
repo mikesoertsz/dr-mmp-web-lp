@@ -71,7 +71,7 @@ export default function InterestBenefits() {
   };
 
   return (
-    <Wrapper id="benefits" className="py-16 md:pt-24 mb:pb-0">
+    <Wrapper id="benefits" className="lg:pt-24 mb:pb-0">
       <InnerWrap>
         {/* Preload all benefit images */}
         <div className="hidden">
@@ -89,17 +89,17 @@ export default function InterestBenefits() {
         <div className="flex flex-col items-center justify-center w-full">
           <Preheading>{benefits.titleblock.preheading}</Preheading>
           <Heading className="mt-4">{benefits.titleblock.heading}</Heading>
-          <p className="mt-6 text-xl text-center mx-auto max-w-lg">
+          <p className="mt-2 md:mt-6 text-sm sm:text-md md:text-lg text-center mx-auto max-w-lg">
             {benefits.titleblock.body}
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 w-full min-h-[40dvh] gap-4 mt-12">
           <div className="col-span-1 flex flex-col items-center justify-center h-full">
-            <ul className="flex flex-col gap-6 h-full">
+            <ul className="flex flex-col sm:flex-row md:flex-col gap-4 sm:gap-6 h-full">
               {benefits.list.slice(0, 2).map((item, index) => (
                 <li
                   key={index}
-                  className="bg-[#F7F0E8] p-8 rounded-xl flex flex-col items-start justify-between h-full transition duration-300 ease-in-out border border-stone-300/10 hover:border-stone-300 cursor-pointer"
+                  className="bg-[#F7F0E8] w-full p-4 md:p-8 rounded-xl flex flex-col items-start justify-between h-full transition duration-300 ease-in-out border border-stone-300/10 hover:border-stone-300 cursor-pointer"
                   onMouseEnter={() => handleMouseEnter(item.image)}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -107,11 +107,11 @@ export default function InterestBenefits() {
                     <p className="text-[11px] text-stone-500 uppercase font-poppins font-medium mb-3 tracking-widest">
                       {item.preheading}
                     </p>
-                    <h3 className="text-3xl font-medium subpixel-antialiased font-recoleta text-stone-900 mb-2">
+                    <h3 className="text-xl md:text-3xl font-medium subpixel-antialiased font-recoleta text-stone-900 mb-2">
                       {item.title}
                     </h3>
                   </div>
-                  <p className="text-sm text-[#94877C] hover:text-black transition duration-3000 ease-in-out font-medium">
+                  <p className="text-xs sm:text-sm text-[#94877C] hover:text-black transition duration-3000 ease-in-out font-medium">
                     {item.description}
                   </p>
                 </li>
@@ -146,11 +146,11 @@ export default function InterestBenefits() {
             )}
           </div>
           <div className="col-span-1 flex flex-col items-center justify-center h-full">
-            <ul className="flex flex-col gap-6 h-full">
+            <ul className="flex flex-col sm:flex-row md:flex-col gap-4 sm:gap-6 h-full">
               {benefits.list.slice(2, 4).map((item, index) => (
                 <li
                   key={index}
-                  className="bg-[#F7F0E8] p-8 rounded-xl flex flex-col items-start justify-between h-full transition duration-300 ease-in-out border border-stone-300/10 hover:border-stone-300 cursor-pointer"
+                  className="bg-[#F7F0E8] w-full p-4 md:p-8 rounded-xl flex flex-col items-start justify-between h-full transition duration-300 ease-in-out border border-stone-300/10 hover:border-stone-300 cursor-pointer"
                   onMouseEnter={() => handleMouseEnter(item.image)}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -158,11 +158,11 @@ export default function InterestBenefits() {
                     <p className="text-[11px] text-stone-500 uppercase font-poppins font-medium mb-3 tracking-widest">
                       {item.preheading}
                     </p>
-                    <h3 className="text-3xl font-medium subpixel-antialiased font-recoleta text-stone-900 mb-2">
+                    <h3 className="text-xl md:text-3xl font-medium subpixel-antialiased font-recoleta text-stone-900 mb-2">
                       {item.title}
                     </h3>
                   </div>
-                  <p className="text-sm text-[#94877C] hover:text-black transition duration-3000 ease-in-out font-medium">
+                  <p className="text-xs sm:text-sm text-[#94877C] hover:text-black transition duration-3000 ease-in-out font-medium">
                     {item.description}
                   </p>
                 </li>
