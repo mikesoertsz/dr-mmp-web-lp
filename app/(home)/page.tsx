@@ -1,16 +1,16 @@
+import ActionMidCta from "./action-mid-cta";
+import PricingSingle from "./action-pricing-single";
 import HeroSection from "./attention-hero";
+import AttentionHook from "./attention-hook";
+import AttentionServices from "./attention-services";
+import DesireFAQ from "./desire-faq";
+import DesireGuarantees from "./desire-guarantees";
+import DesireIncluded from "./desire-included";
+import DesireSocialProofSingle from "./desire-socialproofsingle";
+import DesireWhoFor from "./desire-whofor";
+import InterestBenefits from "./interest-benefits";
 import InterestHowItWorks from "./interest-howitworks";
 import InterestPartners from "./interest-partners";
-import InterestBenefits from "./interest-benefits";
-import DesireSocialProofSingle from "./desire-socialproofsingle";
-import DesireFAQ from "./desire-faq";
-import PricingSingle from "./action-pricing-single";
-import DesireIncluded from "./desire-included";
-import ActionMidCta from "./action-mid-cta";
-import DesireWhoFor from "./desire-whofor";
-import DesireGuarantees from "./desire-guarantees";
-import AttentionServices from "./attention-services";
-import AttentionHook from "./attention-hook";
 
 export default function Home() {
   return (
