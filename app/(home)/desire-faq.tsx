@@ -11,7 +11,7 @@ const faqContent = {
     {
       question: "What's included in the pricing?",
       answer:
-        "Our pricing includes all necessary taxes and services without hidden fees.",
+        "Our pricing includes all necessary taxes (including VAT at 23%) and services without hidden fees. We offer a 100% money back guarantee if you are not satisfied with the service.",
     },
     {
       question: "Do you offer payment plans?",
@@ -20,19 +20,23 @@ const faqContent = {
     },
     {
       question: "What is the delivery time?",
-      answer: "Delivery times vary, but we strive for prompt service.",
+      answer:
+        "Delivery times average 72 hours or 3 business days from the day we do photography of your listing. Larger properties with more complex layouts may take longer.",
     },
     {
       question: "In what formats are the deliverables?",
-      answer: "We provide deliverables in various formats to suit your needs.",
+      answer:
+        "We provide deliverables in various formats to suit your needs. Our images, videos and schematics are made to standard sizes for easy upload to popular platforms like Idealista. If you require a different format, you'll be able to customize when speaking to your dedicated sales representative.",
     },
     {
       question: "How can I request changes?",
-      answer: "You can request changes through our customer support.",
+      answer:
+        "You can request changes through your dedicated sales respresentative who will manage your property portfolio.",
     },
     {
       question: "What if I'm not satisfied?",
-      answer: "We offer revisions to ensure your satisfaction.",
+      answer:
+        "We offer revisions to 3D designs to ensure your satisfaction. If you are not satisfied with the service, we will refund 100% of your money within 15 days of purchase.",
     },
   ],
 };

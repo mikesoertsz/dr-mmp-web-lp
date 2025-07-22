@@ -5,7 +5,9 @@ import Link from "next/link";
 
 const menuItems = [
   { href: "#benefits", label: "Benefits" },
+  { href: "#included", label: "Included" },
   { href: "#how-it-works", label: "How it works" },
+  { href: "/case-study", label: "Case Study" },
   { href: "#pricing", label: "Pricing" },
   { href: "#faq", label: "FAQ" },
 ];

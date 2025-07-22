@@ -9,11 +9,15 @@ import DesireIncluded from "./desire-included";
 import ActionMidCta from "./action-mid-cta";
 import DesireWhoFor from "./desire-whofor";
 import DesireGuarantees from "./desire-guarantees";
+import AttentionServices from "./attention-services";
+import AttentionHook from "./attention-hook";
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
+      <AttentionHook />
+      <AttentionServices />
       <InterestPartners />
       <InterestBenefits />
       <InterestHowItWorks />

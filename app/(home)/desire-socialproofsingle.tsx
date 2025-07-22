@@ -11,9 +11,9 @@ const content = {
     preheading: "What our clients say",
   },
   testimonial: {
-    name: "John Doe",
-    role: "Real Estate Agent",
-    avatar: "/img/testimonial/testi1.jpg",
+    name: "Joel Silva",
+    role: "Diretor Comercial & Real Estate Advisor",
+    avatar: "/img/testimonial/joelsilva.jpg",
     company: "Century21",
     location: "Porto, Portugal",
     text: "As a Century21 agent, I find it incredibly easy to get quality pictures & designs that market properties perfectly. The All-in-one package includes everything I need, making the process seamless and efficient.",
@@ -37,7 +37,9 @@ export default function DesireSocialProofSingle() {
         >
           <div className="flex flex-col items-center justify-center">
             <Quote className="h-8 w-8 mb-4" />
-            <p className="text-sm sm:text-md md:text-lg mb-4">{content.testimonial.text}</p>
+            <p className="text-sm sm:text-md md:text-lg mb-4">
+              {content.testimonial.text}
+            </p>
           </div>
           <div className="text-stone-500 flex flex-col items-center justify-center">
             <Image
