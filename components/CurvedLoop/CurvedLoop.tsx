@@ -66,7 +66,7 @@ const CurvedLoop: FC<CurvedLoopProps> = ({
       if (!dragRef.current && textPathRef.current) {
         const delta = dirRef.current === "right" ? speed : -speed;
         const currentOffset = parseFloat(
-          textPathRef.current.getAttribute("startOffset") || "0",
+          textPathRef.current.getAttribute("startOffset") || "0"
         );
         let newOffset = currentOffset + delta;
 
@@ -98,7 +98,7 @@ const CurvedLoop: FC<CurvedLoopProps> = ({
     velRef.current = dx;
 
     const currentOffset = parseFloat(
-      textPathRef.current.getAttribute("startOffset") || "0",
+      textPathRef.current.getAttribute("startOffset") || "0"
     );
     let newOffset = currentOffset + dx;
 
@@ -124,7 +124,7 @@ const CurvedLoop: FC<CurvedLoopProps> = ({
 
   return (
     <div
-      className="min-h-screen flex items-center justify-center w-full"
+      className="min-h-[10dvh] flex items-center justify-center w-full"
       style={{ visibility: ready ? "visible" : "hidden", cursor: cursorStyle }}
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
@@ -132,7 +132,7 @@ const CurvedLoop: FC<CurvedLoopProps> = ({
       onPointerLeave={endDrag}
     >
       <svg
-        className="select-none w-full overflow-visible block aspect-[100/12] text-[6rem] font-bold uppercase leading-none"
+        className="select-none w-full overflow-visible block aspect-[100/12] text-[6rem] font-semibold uppercase leading-none tracking-tight"
         viewBox="0 0 1440 120"
       >
         <text
@@ -152,7 +152,10 @@ const CurvedLoop: FC<CurvedLoopProps> = ({
           />
         </defs>
         {ready && (
-          <text xmlSpace="preserve" className={`fill-white ${className ?? ""}`}>
+          <text
+            xmlSpace="preserve"
+            className={`fill-stone-900 ${className ?? ""}`}
+          >
             <textPath
               ref={textPathRef}
               href={`#${pathId}`}

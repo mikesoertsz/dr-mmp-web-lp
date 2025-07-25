@@ -13,20 +13,20 @@ export default function InterestPartners() {
       link: "https://www.century21.com",
       alt: "Century 21",
     },
-    {
-      icon: "/img/logos/realestate/wide/idealista.svg",
-      width: 110,
-      height: 100,
-      link: "https://www.idealista.com",
-      alt: "Idealista",
-    },
-    {
-      icon: "/img/logos/other/airbnb.svg",
-      width: 110,
-      height: 100,
-      link: "https://www.airbnb.com",
-      alt: "Airbnb",
-    },
+    // {
+    //   icon: "/img/logos/realestate/wide/idealista.svg",
+    //   width: 110,
+    //   height: 100,
+    //   link: "https://www.idealista.com",
+    //   alt: "Idealista",
+    // },
+    // {
+    //   icon: "/img/logos/other/airbnb.svg",
+    //   width: 110,
+    //   height: 100,
+    //   link: "https://www.airbnb.com",
+    //   alt: "Airbnb",
+    // },
     // {
     //   icon: "/img/logos/other/jamesedition.svg",
     //   width: 140,
@@ -48,11 +48,11 @@ export default function InterestPartners() {
             orientation="center"
           />
         </div>
-        <ul className="grid grid-cols-2 sm:flex items-center justify-center gap-4">
+        <ul className="grid grid-cols1 md:grid-cols-2 sm:flex items-center justify-center gap-4">
           {partners.map((partner, index) => (
             <li
               key={index}
-              className="col-span-1 flex items-center justify-center relative h-20 bg-[#F7F0E8] rounded-2xl px-8 py-4"
+              className="flex items-center justify-center relative h-20 bg-[#F7F0E8] rounded-2xl px-8 py-4"
             >
               <a
                 href={partner.link}

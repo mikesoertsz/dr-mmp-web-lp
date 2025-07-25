@@ -26,7 +26,7 @@ export function TitleBlock({
   return (
     <div
       className={clsx(
-        "flex w-full max-w-3xl gap-5",
+        "flex w-full max-w-3xl gap-5 antialiased",
         orientation === "center" &&
           "flex-col items-center justify-center text-center gap-2",
         orientation === "left" &&
@@ -44,13 +44,9 @@ export function TitleBlock({
           {preheading}
         </Preheading>
       )}
-      {heading && (
-        <Heading className="font-recoleta font-light tracking-tight subpixel-antialiased">
-          {heading}
-        </Heading>
-      )}
+      {heading && <Heading className="">{heading}</Heading>}
       {subheading && (
-        <SubHeading className="subpixel-antialiased font-light font-poppins text-stone-500 max-w-lg">
+        <SubHeading className="font-light font-poppins text-stone-500 max-w-lg">
           {subheading}
         </SubHeading>
       )}

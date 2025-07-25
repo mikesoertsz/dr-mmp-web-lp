@@ -1,5 +1,4 @@
 "use client";
-
 import { InnerWrap, Wrapper } from "@/app/(shared)/atoms";
 import { Button } from "@/components/ui/button";
 
@@ -47,6 +46,13 @@ export default function HeroSection() {
           </div>
         </div>
       </InnerWrap>
+
+      {/* <CurvedLoop
+        marqueeText="Photography / Videos / Virtual Tours / 3D Renders / AI Renders / Floorplan Designs / Property Brochures / Drone Footage."
+        speed={0.9}
+        curveAmount={300}
+        className="font-bold"
+      /> */}
     </Wrapper>
   );
 }

@@ -95,7 +95,7 @@ export default function InterestBenefits() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 w-full min-h-[40dvh] gap-4 mt-12">
           <div className="col-span-1 flex flex-col items-center justify-center h-full">
-            <ul className="flex flex-col sm:flex-row md:flex-col gap-4 sm:gap-6 h-full">
+            <ul className="flex flex-col sm:flex-row md:flex-col gap-4 sm:gap-2 h-full">
               {benefits.list.slice(0, 2).map((item, index) => (
                 <li
                   key={index}
@@ -118,7 +118,7 @@ export default function InterestBenefits() {
               ))}
             </ul>
           </div>
-          <div className="relative overflow-hidden col-span-1 flex flex-col items-center justify-center h-full rounded-xl bg-[#F7F0E8] transition duration-3000 ease-in-out">
+          <div className="relative overflow-hidden col-span-1 hidden md:flex flex-col items-center justify-center h-full rounded-xl bg-[#F7F0E8] transition duration-3000 ease-in-out">
             {loading ? (
               <Loader className="animate-spin text-stone-600" size={24} />
             ) : (
@@ -146,7 +146,7 @@ export default function InterestBenefits() {
             )}
           </div>
           <div className="col-span-1 flex flex-col items-center justify-center h-full">
-            <ul className="flex flex-col sm:flex-row md:flex-col gap-4 sm:gap-6 h-full">
+            <ul className="flex flex-col sm:flex-row md:flex-col gap-4 sm:gap-2 h-full">
               {benefits.list.slice(2, 4).map((item, index) => (
                 <li
                   key={index}

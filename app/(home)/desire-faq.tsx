@@ -1,10 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
-import { Plus } from "lucide-react";
-import { motion } from "framer-motion";
-import { InnerWrap, Wrapper } from "@/app/(shared)/atoms";
-import { TitleBlock } from "@/app/(shared)/titleblock";
+import React from "react";
+import { Heading, InnerWrap, Preheading, Wrapper } from "@/app/(shared)/atoms";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 const faqContent = {
   questions: [
@@ -42,79 +45,30 @@ const faqContent = {
 };
 
 export default function DesireFAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggleAccordion = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <Wrapper id="faq" className={` min-h-[50dvh]`}>
       <InnerWrap className="flex flex-col md:flex-row gap-8 h-full w-full">
-        <div className="md:w-1/3 flex flex-col">
-          <TitleBlock
-            preheading="Common Questions"
-            heading="FAQs"
-            theme="light"
-            orientation="center"
-            terminalTextClassName="text-orange-500"
-          />
+        <div className="md:w-1/3 flex flex-col items-center justify-center md:items-start md:justify-start h-full">
+          <Preheading className="text-center">Common Questions</Preheading>
+          <Heading className="text-center">FAQs</Heading>
         </div>
-        <div className="w-full md:w-2/3">
-          <motion.ul
-            className="space-y-6"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: {
-                  staggerChildren: 0.2,
-                },
-              },
-            }}
-          >
+        <div className="w-full md:w-2/3 px-8 md:px-0">
+          <Accordion type="single" collapsible>
             {faqContent.questions.map((item, index) => (
-              <motion.li
-                key={index}
-                className="border-b border-stone-900/10 pb-4"
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-              >
-                <div
-                  className="flex items-center justify-between cursor-pointer"
-                  onClick={() => toggleAccordion(index)}
-                >
+              <AccordionItem key={index} value={`item-${index}`}>
+                <AccordionTrigger className="flex items-center justify-between cursor-pointer">
                   <div className="font-medium text-sm text-brand-secondary mb-1">
                     {item.question}
                   </div>
-                  <Plus
-                    size={16}
-                    strokeWidth={1.5}
-                    className={`transition-transform ${
-                      openIndex === index ? "rotate-45" : ""
-                    }`}
-                  />
-                </div>
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{
-                    height: openIndex === index ? "auto" : 0,
-                    opacity: openIndex === index ? 1 : 0,
-                  }}
-                  transition={{ duration: 0.3 }}
-                  className="overflow-hidden"
-                >
+                </AccordionTrigger>
+                <AccordionContent>
                   <div className="text-brand-tertiary text-sm mt-2 max-w-xl">
                     {item.answer}
                   </div>
-                </motion.div>
-              </motion.li>
+                </AccordionContent>
+              </AccordionItem>
             ))}
-          </motion.ul>
+          </Accordion>
         </div>
       </InnerWrap>
     </Wrapper>

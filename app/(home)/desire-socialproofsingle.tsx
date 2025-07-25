@@ -47,7 +47,7 @@ export default function DesireSocialProofSingle() {
               alt={content.testimonial.name}
               width={60}
               height={60}
-              className="rounded-sm my-4"
+              className="rounded-full my-4"
             />
             <p className="font-medium tracking-tight text-amber-900">
               {content.testimonial.name}

@@ -37,7 +37,7 @@ const guarantees = {
 
 export default function DesireGuarantees() {
   return (
-    <Wrapper className="flex justify-center items-center py-8 bg-[#F7F0E8] border-t border-b border-stone-300/40">
+    <Wrapper className="flex justify-center items-center py-12 md:py-0 bg-[#F7F0E8] border-t border-b border-stone-300/40">
       <InnerWrap className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
         <div className="col-span-1 flex flex-col items-center md:items-end justify-center text-right">
           <h4 className="text-center md:text-end text-md font-medium font-inter text-stone-900">

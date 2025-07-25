@@ -42,12 +42,7 @@ const defaultPricing: PricingData = {
   ],
   description: "Everything you need to market your property.",
   buttonText: "Buy Package",
-  links: [
-    {
-      href: "#",
-      text: "Calculate your costs",
-    },
-  ],
+  links: [],
   includedText: "Included Services",
   optionalServiceText: "Optional add-on services",
   footerText:
@@ -76,7 +71,7 @@ export default function PricingSingle({ pricing }: { pricing?: PricingData }) {
 
   return (
     <Wrapper className="min-h-[60dvh] group px-5" id="pricing">
-      <InnerWrap className="bg-[#F7F0E8] group-hover:bg-white transition duration-500 group-hover:shadow-lg ease-in-out rounded-2xl overflow-hidden border border-stone-500/20 w-full">
+      <InnerWrap className="bg-white md:bg-[#F7F0E8] group-hover:bg-white transition duration-500 group-hover:shadow-lg ease-in-out rounded-2xl overflow-hidden border border-stone-500/20 w-full">
         <div className="grid grid-cols-1 md:grid-cols-3 w-full relative ">
           <div className="flex flex-col col-span-2 items-start justify-between pt-6 p-4 md:p-6 lg:p-12 md:border-r border-stone-300/40">
             <div>
