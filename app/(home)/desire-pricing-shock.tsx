@@ -24,7 +24,7 @@ const pricingData = {
     {
       title: "Professional Photography",
       icon: <Camera size={20} className="text-stone-600" strokeWidth={1.5} />,
-      marketPrice: 325,
+      marketPrice: 225,
       averageTime: 2,
     },
     {
@@ -36,7 +36,7 @@ const pricingData = {
     {
       title: "Drone Photography & Video",
       icon: <Drone size={20} className="text-stone-600" strokeWidth={1.5} />,
-      marketPrice: 275,
+      marketPrice: 375,
       averageTime: 2,
     },
     {
@@ -48,7 +48,7 @@ const pricingData = {
     {
       title: "3D Renders",
       icon: <Box size={20} className="text-stone-600" strokeWidth={1.5} />,
-      marketPrice: 500,
+      marketPrice: 700,
       averageTime: 5,
     },
     {
@@ -70,13 +70,15 @@ const pricingData = {
       averageTime: 4,
     },
   ],
-  marketRate: 4575,
-  savings: 1287,
+  marketRate: 0, // Placeholder, will be calculated
+  savings: 0, // Placeholder, will be calculated
   additionalBenefits: [
     "Single point of contact",
     "Coordinated delivery timeline",
-    "Consistent brand styling",
-    "Priority support included",
+    "Consistent design & styling",
+    "No hidden fees",
+    "Optimized for online platforms",
+    "Cloud backup storage included",
   ],
   cta: {
     text: "Ready to transform your property marketing?",
@@ -96,6 +98,10 @@ export default function DesirePricingShock() {
     0
   );
 
+  // Calculate market rate and savings
+  pricingData.marketRate = totalMarketPrice;
+  pricingData.savings = totalMarketPrice - pricingData.packagePrice;
+
   return (
     <Wrapper className="bg-white min-h-screen py-24 w-full px-4 md:px-0">
       <InnerWrap className="lg:px-0 px-0 mx-auto w-full">
@@ -111,7 +117,7 @@ export default function DesirePricingShock() {
             <div className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium mb-3 font-poppins">
               Best Value
             </div>
-            <h4 className="text-2xl font-bold text-stone-800 mb-2 font-poppins">
+            <h4 className="text-2xl font-light tracking-tight text-stone-800 mb-2 font-poppins antialiased">
               Complete Marketing Package
             </h4>
             <p className="text-stone-600 mb-4 text-sm font-poppins">
@@ -124,8 +130,10 @@ export default function DesirePricingShock() {
               <TableHeader>
                 <TableRow>
                   <TableHead>Service</TableHead>
-                  <TableHead>Average Price</TableHead>
-                  <TableHead>Average Time (days)</TableHead>
+                  <TableHead className="text-center">Average Price</TableHead>
+                  <TableHead className="text-right">
+                    Average Time (days)
+                  </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -134,19 +142,21 @@ export default function DesirePricingShock() {
                     <TableCell className="flex items-center gap-2">
                       {service.icon} {service.title}
                     </TableCell>
-                    <TableCell>
+                    <TableCell className="text-center">
                       €{service.marketPrice.toLocaleString()}
                     </TableCell>
-                    <TableCell>{service.averageTime} days</TableCell>
+                    <TableCell className="text-right">
+                      {service.averageTime} days
+                    </TableCell>
                   </TableRow>
                 ))}
                 {/* Totals Row */}
                 <TableRow>
                   <TableCell className="font-bold">Total</TableCell>
-                  <TableCell className="font-bold">
+                  <TableCell className="font-bold text-center">
                     €{totalMarketPrice.toLocaleString()}
                   </TableCell>
-                  <TableCell className="font-bold">
+                  <TableCell className="font-bold text-right">
                     {totalAverageTime} days
                   </TableCell>
                 </TableRow>
@@ -157,9 +167,9 @@ export default function DesirePricingShock() {
           <div className="w-full p-4">
             <div className="flex justify-between items-center mb-2">
               <span className="text-lg font-medium text-stone-800 font-poppins">
-                Full Market Rate
+                Average Market Rate
               </span>
-              <span className="text-3xl font-light text-stone-900 font-poppins">
+              <span className="text-2xl font-light text-stone-900 font-poppins">
                 €{pricingData.marketRate.toLocaleString()}
               </span>
             </div>
@@ -167,16 +177,24 @@ export default function DesirePricingShock() {
               <span className="text-lg font-medium text-stone-800 font-poppins">
                 Our Rate
               </span>
-              <span className="text-3xl font-light text-stone-900 font-poppins">
+              <span className="text-2xl font-light text-stone-900 font-poppins">
                 €{pricingData.packagePrice.toLocaleString()}
               </span>
             </div>
             <div className="flex justify-between items-center">
-              <span className="text-sm text-green-600 font-poppins">
+              <span className="text-lg text-green-600 font-poppins">
                 You Save
               </span>
-              <span className="text-xl font-light text-green-600 font-poppins">
+              <span className="text-3xl font-light text-green-600 font-poppins">
                 €{pricingData.savings.toLocaleString()}
+              </span>
+            </div>
+            <div className="flex justify-between items-center mt-4">
+              <span className="text-sm text-stone-800 font-poppins">
+                Normal Time
+              </span>
+              <span className="text-xl font-light text-stone-900 font-poppins">
+                2 Weeks
               </span>
             </div>
             <div className="flex justify-between items-center mt-4">
@@ -191,14 +209,17 @@ export default function DesirePricingShock() {
         </div>
 
         {/* Additional Benefits */}
-        <div className="bg-[#F6F4F1]/40 rounded-2xl overflow-hidden w-full p-2 mb-6 mt-2">
-          <div className="p-4">
-            <h5 className="text-stone-800 mb-3 font-poppins tracking-tight text-md font-medium">
+        <div className="bg-[#F6F4F1]/40 rounded-2xl overflow-hidden w-full p-8 mt-3">
+          <div className="flex flex-col items-center justify-center gap-4 w-full">
+            <h5 className="text-stone-800 font-recoleta tracking-tight subpixel-antialiased text-3xl col-span-2">
               Additional Benefits
             </h5>
-            <ul className="space-y-2 text-sm text-stone-600 font-poppins">
+            <ul className="grid grid-cols-2 gap-2 w-full">
               {pricingData.additionalBenefits.map((benefit, index) => (
-                <li key={index} className="flex items-start space-x-2">
+                <li
+                  key={index}
+                  className="flex items-center justify-center border p-4 rounded-xl text-md font-poppins  "
+                >
                   <span className="font-medium">{benefit}</span>
                 </li>
               ))}
