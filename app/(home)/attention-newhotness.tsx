@@ -61,7 +61,7 @@ export default function AttentionNewHotness() {
               ))}
             </ul>
           </div>
-          <Link href="/case-study" className="mt-12">
+          <Link href="/case-study" className="mt-12 hidden">
             <Button className="bg-stone-800 hover:bg-stone-700 cursor-pointer transition duration-300 ease-in-out rounded-xl h-10 md:h-12 px-4 md:px-6">
               {newHotness.cta.text}
             </Button>

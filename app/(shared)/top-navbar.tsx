@@ -7,7 +7,7 @@ const menuItems = [
   { href: "#benefits", label: "Benefits", type: "scroll" },
   { href: "#how-it-works", label: "How it works", type: "scroll" },
   { href: "#included", label: "Included", type: "scroll" },
-  { href: "/case-study", label: "Case Study", type: "redirect" },
+  // { href: "/case-study", label: "Case Study", type: "redirect" },
   { href: "#pricing", label: "Pricing", type: "scroll" },
   { href: "#faq", label: "FAQ", type: "scroll" },
 ];
